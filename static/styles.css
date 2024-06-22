@@ -1,12 +1,11 @@
 :root {   
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
+    font-size: 18px;
 }
 
 body {
     margin: 0px;
-    color: #1a1b1f;
+    color: #211C1B;
+    background-color: #F7E5E3;
 }
 
 .section {
@@ -91,14 +90,13 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-style: italic;
-  }
-  
+  } 
 
 
 /* ****************** Navbar Styling ****************** */
 .navbar {
     background-color: transparent;
-    padding: 30px 120px 30px 120px;
+    padding: 40px 120px 40px 120px;
     display: flex;
     justify-content: space-between;
 }
@@ -106,24 +104,39 @@ body {
 .logo-link {
     display: flex;
     justify-content: flex-start;
-    text-decoration: none;
-    color: #1a1b1f;
 }
 
 .logo-img {
-    max-height: 40px;
+    max-height: 56px;
     width: auto;
+}
+
+.logo-img:hover {
+  filter: grayscale(20%);
+  opacity: 0.8;
 }
 
 .navbar-nav {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 60px;
+    margin: 10px;
 }
 
 .nav-link {
-    color: #1a1b1f;
+    color: #211C1B;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link.active {
+  border-bottom: 1px solid #211C1B;;
+}
+
+.nav-link:hover {
+  color: #AE9492;
 }
 
 /* ****************** Home Styling ****************** */
