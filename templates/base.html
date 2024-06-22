@@ -6,14 +6,19 @@
     <title>{% block title %}Home{% endblock%}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel=stylesheet type=text/css href="{{ url_for('static',
     filename='styles.css') }}">
   </head>
   <body>
-    <nav class="navbar">
-        <a class="logo-link" id="home" href="/">HOME</a>
+    <nav class="navbar lato-light">
+        <a class="logo-link" id="home" href="/">
+          <img class="logo-img" src="./static/mylogo.png" alt="my personal branding logo">
+        </a>
         <div class="navbar-nav">
             <a class="nav-link" id="work" href="/">WORK</a>
             <a class="nav-link" id="about" href="/about">ABOUT</a>
