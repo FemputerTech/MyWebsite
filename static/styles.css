@@ -1,0 +1,44 @@
+:root {
+    font-family: "Inter", sans-serif;
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+body {
+    margin: 0px;
+    color: #1a1b1f;
+}
+
+.section {
+    margin: 0 120px 0 120px;
+}
+
+/* ****************** Navbar Styling ****************** */
+.navbar {
+    background-color: transparent;
+    padding: 30px 120px 30px 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #1a1b1f;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #1a1b1f;
+    text-decoration: none;
+}
+
+/* ****************** Home Styling ****************** */
