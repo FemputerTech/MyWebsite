@@ -11,7 +11,7 @@
 :root {
   /* Colors */
   --primary-color: #9798bf;
-  --primary-color-light: #b4b5e4;
+  --primary-color-light: #aeafdc;
   --text-normal: #252322;
   --body-color: #f0eae2;
   --navbar-color: transparent;
@@ -136,6 +136,18 @@ nav {
 
 /*~~~~~~~~~~ Work Content ~~~~~~~~~~*/
 .work-content {
-  background-color: aqua;
-  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--primary-color-light);
+  padding: 20px;
+  margin: 50px;
+}
+
+.card-image {
+  background-color: black;
+  height: 500px;
+  width: 100%;
 }
