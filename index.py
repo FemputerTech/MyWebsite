@@ -3,6 +3,7 @@ This module defines the view for handling GET requests to the home page.
 """
 from flask import render_template
 from flask.views import MethodView
+from data import projects
 
 
 class Index(MethodView):
@@ -23,4 +24,4 @@ class Index(MethodView):
             The rendered HTML template for the index page.
         """
         print ("It's aliiiiive!")
-        return render_template('index.html')
+        return render_template('index.html', projects=projects)
