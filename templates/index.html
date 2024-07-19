@@ -2,8 +2,23 @@
 {% extends "base.html" %}Home{% block content %}
 <section class="hero">
   <div class="hero-content">
-    <h1>Hi there. I'm Meghan, an aspring Frontend Developer</h1>
+    <h1>Hi there!</h1>
+    <p>
+      My name is Meghan and I'm a frontend developer with a background in health
+      insurance. My unique perspective from the health insurance industry allows
+      me to approach problems with a keen eye for detail and a strong focus on
+      user needs.
+    </p>
   </div>
   <div class="hero-image"></div>
+  <div class="next">
+    <i
+      class="icon bx bx-chevron-down bx-lg bx-fade-down bx-tada-hover"
+      onclick="scrollToSection('work')"
+    ></i>
+  </div>
+</section>
+<section class="work-content" id="work">
+  <h1>My Work</h1>
 </section>
 {% endblock %}
