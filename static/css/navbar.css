@@ -8,11 +8,10 @@
 
 .logo-image {
   width: 40px;
-  /* margin-right: 10px; */
 }
 
 .logo-text {
-  font-family: "Abril Fatface", serif;
+  font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 100;
 }
@@ -51,4 +50,8 @@ nav {
 .nav-link:hover {
   background-color: var(--hover-color);
   border-radius: 50px;
+}
+
+.theme-toggle:hover {
+  cursor: pointer;
 }

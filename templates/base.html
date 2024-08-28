@@ -36,7 +36,14 @@
           </li>
         </ul>
       </nav>
-      <box-icon type="solid" name="sun"></box-icon>
+      <div class="theme-toggle">
+        <box-icon
+          color="var(--text-normal)"
+          type="solid"
+          name="sun"
+          onclick="toggleTheme()"
+        ></box-icon>
+      </div>
     </header>
     <main>{% block content %}{% endblock %}</main>
     <footer></footer>

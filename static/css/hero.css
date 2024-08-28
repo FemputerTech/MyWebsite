@@ -10,7 +10,7 @@
 }
 
 .hero-content h1 {
-  font-family: "Abril Fatface", serif;
+  font-family: var(--font-heading);
   font-size: 64px;
   font-weight: 400;
   margin-bottom: 20px;
@@ -25,7 +25,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #9798bf; */
 }
 
 .icon:hover {
