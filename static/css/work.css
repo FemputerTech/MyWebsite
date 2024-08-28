@@ -1,0 +1,17 @@
+/* ****************** Work Content ****************** */
+.work-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--primary-color-light);
+  padding: 20px;
+  margin: 50px;
+}
+
+.card-image {
+  background-color: black;
+  height: 500px;
+  width: 100%;
+}

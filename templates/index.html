@@ -1,5 +1,8 @@
 <!-- extend base template -->
-{% extends "base.html" %}Home{% block content %}
+{% extends "base.html" %} {% block css %}
+<link rel="stylesheet" href="/static/css/hero.css" />
+<link rel="stylesheet" href="/static/css/work.css" />
+{% endblock%} Home{% block content %}
 <section class="hero">
   <div class="hero-content">
     <h1>Hi there!</h1>

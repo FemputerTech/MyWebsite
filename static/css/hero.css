@@ -1,0 +1,33 @@
+/* ****************** Hero ****************** */
+.hero {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  padding: 100px 20px;
+  width: 54%;
+}
+
+.hero-content h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #9798bf; */
+}
+
+.icon:hover {
+  cursor: pointer;
+}

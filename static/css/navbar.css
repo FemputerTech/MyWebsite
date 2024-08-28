@@ -1,0 +1,54 @@
+/* ****************** Navbar ****************** */
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.logo-image {
+  width: 40px;
+  /* margin-right: 10px; */
+}
+
+.logo-text {
+  font-family: "Abril Fatface", serif;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  list-style-type: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  margin-left: 20px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  color: var(--text-normal);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 20px;
+}
+
+.nav-link:hover {
+  background-color: var(--hover-color);
+  border-radius: 50px;
+}
