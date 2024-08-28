@@ -36,15 +36,15 @@
             <a class="nav-link" id="contact" href="/contact">Contact</a>
           </li>
         </ul>
+        <div class="theme-toggle">
+          <box-icon
+            color="var(--text-normal)"
+            type="solid"
+            name="sun"
+            onclick="toggleTheme()"
+          ></box-icon>
+        </div>
       </nav>
-      <div class="theme-toggle">
-        <box-icon
-          color="var(--text-normal)"
-          type="solid"
-          name="sun"
-          onclick="toggleTheme()"
-        ></box-icon>
-      </div>
     </header>
     <main>{% block content %}{% endblock %}</main>
     <footer></footer>
