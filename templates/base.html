@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meghan Leicht</title>
-    <link rel="stylesheet" href="/static/css/navbar.css" />
     <link rel="stylesheet" href="/static/css/app.css" />
+    <link rel="stylesheet" href="/static/css/navbar.css" />
+    <link rel="stylesheet" href="/static/css/goo.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -47,6 +48,23 @@
     </header>
     <main>{% block content %}{% endblock %}</main>
     <footer></footer>
+    <div class="goo-container"></div>
+    <svg>
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          <feColorMatrix
+            in="name"
+            mode="matrix"
+            values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 30 -15"
+          />
+          <feBlend in="SourceGraphic" />
+        </filter>
+      </defs>
+    </svg>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script defer src="/static/js/scripts.js"></script>
   </body>
