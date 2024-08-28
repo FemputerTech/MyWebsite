@@ -27,6 +27,7 @@ nav {
   align-items: center;
   align-self: stretch;
   list-style-type: none;
+  margin-right: 20px;
 }
 
 .nav-item {
