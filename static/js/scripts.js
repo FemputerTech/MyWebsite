@@ -7,7 +7,7 @@ function scrollToSection(sectionId) {
 
 function toggleTheme() {
   const currentTheme = document.documentElement.getAttribute("data-theme");
-  const gooContainer = document.querySelector(".goo");
+  const gooContainer = document.querySelector(".goo-container");
 
   if (currentTheme === "spooky") {
     document.documentElement.removeAttribute("data-theme");
@@ -27,16 +27,44 @@ function toggleTheme() {
 function gooDrips() {
   const gooContainer = document.querySelector(".goo-container");
   const numDrips = 16;
-  const minSize = 60;
-  const maxSize = 100;
+  const minSize = 120;
+  const maxSize = 240;
 
   // Creating the drips
   for (let i = 0; i < numDrips; i++) {
     const drip = document.createElement("div");
     const size = Math.random() * (maxSize - minSize) + minSize;
 
-    drip.classList.add("drip");
+    // Create SVG element for each drip
+    const svgElement = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    svgElement.setAttribute("width", `${size}`);
+    svgElement.setAttribute("height", `${size}`);
+    svgElement.setAttribute("viewBox", "0 0 200 200");
+    svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 
+    const pathElement = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "path"
+    );
+    pathElement.setAttribute("fill", "green");
+    pathElement.setAttribute(
+      "d",
+      "M35.7,-16.7C39.8,0.8,32,17.1,20,25.3C8.1,33.4,-8.1,33.4,-18.5,25.8C-28.8,18.2,-33.4,2.9,-29.3,-14.6C-25.3,-32.1,-12.6,-52,1.6,-52.5C15.8,-53,31.7,-34.2,35.7,-16.7Z"
+    );
+    pathElement.setAttribute("transform", "translate(100 100)");
+
+    svgElement.appendChild(pathElement);
+    drip.appendChild(svgElement);
+
+    // Randomly decide if the drip should be flipped vertically
+    if (Math.random() > 0.5) {
+      svgElement.style.transform = "scaleX(-1)";
+    }
+
+    drip.classList.add("drip");
     drip.style.width = `${size}px`; // Random width between 60px and 120px
     drip.style.height = `${size}px`; // Keep it a circle for now
     drip.style.left = `${Math.random() * 100}%`; // Random position between 0% and 100%
