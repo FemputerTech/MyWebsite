@@ -20,11 +20,11 @@
   --font-heading: "Abril Fatface", serif;
 }
 
-[data-theme="spooky"] {
+.spooky {
   --primary-color: #5abf35;
   --primary-color-light: #71bf54;
 
-  --goo: green;
+  --goo: black;
   --text-normal: #f0eae2;
   --body-color: #252322;
 
