@@ -26,7 +26,7 @@ function toggleTheme() {
 
 function gooDrips() {
   const gooContainer = document.querySelector(".goo-container");
-  const numDrips = 16;
+  const numDrips = 20;
   const minSize = 120;
   const maxSize = 240;
 
