@@ -52,6 +52,11 @@ nav {
   border-radius: 50px;
 }
 
-.theme-toggle:hover {
+.dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.dark-mode-toggle:hover {
   cursor: pointer;
 }

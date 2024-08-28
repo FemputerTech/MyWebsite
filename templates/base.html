@@ -36,14 +36,17 @@
             <a class="nav-link" id="contact" href="/contact">Contact</a>
           </li>
         </ul>
-        <div class="theme-toggle">
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="toggle dark mode"
+        >
           <box-icon
             color="var(--text-normal)"
             type="solid"
             name="sun"
-            onclick="toggleTheme()"
           ></box-icon>
-        </div>
+        </button>
       </nav>
     </header>
     <main>{% block content %}{% endblock %}</main>
@@ -67,5 +70,6 @@
     </svg>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script defer src="/static/js/scripts.js"></script>
+    <script defer src="/static/js/spooky.js"></script>
   </body>
 </html>
