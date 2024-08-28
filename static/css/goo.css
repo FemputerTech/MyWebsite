@@ -35,7 +35,7 @@
 }
 
 .border.top {
-  background-color: green;
+  background-color: var(--goo);
   top: 0;
 }
 
