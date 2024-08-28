@@ -23,5 +23,4 @@ class Index(MethodView):
         response : str
             The rendered HTML template for the index page.
         """
-        print ("It's aliiiiive!")
         return render_template('index.html', projects=projects)
