@@ -31,6 +31,7 @@
 }
 
 body {
+  position: relative;
   color: var(--text-normal);
   background-color: var(--body-color);
   font-family: var(--font-family);
