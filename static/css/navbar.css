@@ -12,7 +12,7 @@
 
 .logo-text {
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: var(--logo-font-size);
   font-weight: 100;
 }
 

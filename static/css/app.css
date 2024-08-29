@@ -18,6 +18,7 @@
 
   --font-family: "Poppins", sans-serif;
   --font-heading: "Abril Fatface", serif;
+  --logo-font-size: 22px;
 }
 
 .spooky {
@@ -29,6 +30,7 @@
   --goo: #394434;
 
   --font-heading: "Creepster", system-ui;
+  --logo-font-size: 28px;
 }
 
 body {
