@@ -5,18 +5,23 @@
 }
 
 .hero-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-text {
   padding: 100px 20px;
   width: 54%;
 }
 
-.hero-content h1 {
+.hero-text h1 {
   font-family: var(--font-heading);
   font-size: 64px;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
-.hero-content p {
+.hero-text p {
   font-size: 18px;
   line-height: 28px;
 }
@@ -29,4 +34,13 @@
 
 .icon:hover {
   cursor: pointer;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.me {
+  object-fit: cover;
+  width: 100%;
 }
