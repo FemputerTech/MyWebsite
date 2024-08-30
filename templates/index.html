@@ -1,7 +1,6 @@
 <!-- extend base template -->
 {% extends "base.html" %}Home{% block css %}
 <link rel="stylesheet" href="/static/css/hero.css" />
-<link rel="stylesheet" href="/static/css/work.css" />
 {% endblock%} Home{% block content %}
 <section class="hero">
   <div class="hero-content">
@@ -23,18 +22,9 @@
   <div class="next">
     <i
       class="icon bx bx-chevron-down bx-lg bx-fade-down bx-tada-hover"
-      onclick="scrollToSection('work')"
+      onclick="scrollToSection('about')"
     ></i>
   </div>
 </section>
-<section class="work-content" id="work">
-  <!-- {% for project in projects %}
-  <article class="card">
-    <img class="card-image" src="" />
-    <h1 class="card-title">{{ project.title }}</h1>
-    <h2 class="card-tagline">{{ project.tagline }}</h2>
-    <p class="card-description">{{ project.description }}</p>
-  </article>
-  {% endfor %} -->
-</section>
-{% endblock %}
+{% include 'about.html' %} {% include 'work.html' %} {% include 'contact.html'
+%} {% endblock %}
