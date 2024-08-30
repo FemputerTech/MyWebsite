@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  z-index: -1;
+  z-index: -999;
   width: 100%;
   height: 100%;
   filter: url(#goo);
@@ -34,19 +34,27 @@
   height: 60px;
 }
 
-.border.top {
+.border #top {
   background-color: var(--goo);
   top: 0;
 }
 
 .border.bottom {
-  bottom: 80px;
+  bottom: 180px;
 }
 
 .svg-top {
   position: absolute;
-  display: block;
-  top: 60px;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: -1;
+}
+
+.svg-bottom {
+  position: absolute;
+  bottom: 10px;
   left: 0;
   width: 100%;
   height: 80px;

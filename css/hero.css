@@ -2,15 +2,17 @@
 .hero {
   width: 100%;
   height: 100vh;
+  margin-top: 40px;
 }
 
 .hero-content {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .hero-text {
-  padding: 100px 20px 0 20px;
   width: 54%;
 }
 
@@ -57,4 +59,5 @@
 .hero-image img {
   object-fit: cover;
   width: 100%;
+  padding: 20px;
 }

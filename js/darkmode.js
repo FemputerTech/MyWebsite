@@ -128,7 +128,7 @@ function gooDrips() {
   bottomBorder.classList.add("border", "bottom");
 
   gooContainer.appendChild(topBorder);
-  gooContainer.appendChild(svgElement);
+  topBorder.appendChild(svgElement);
   gooContainer.appendChild(bottomBorder);
   bottomBorder.appendChild(svgElementFlip);
 }
