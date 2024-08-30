@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FemputerTech</title>
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/hero.css" />
+    <link rel="stylesheet" href="/css/work.css" />
+    <link rel="stylesheet" href="/css/goo.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img class="logo-image" src="" alt="logo" />
+        <span class="logo-text">FemputerTech</span>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Resume</a>
+          </li>
+        </ul>
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="toggle dark mode"
+        >
+          <box-icon
+            color="var(--text-normal)"
+            type="solid"
+            name="sun"
+          ></box-icon>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hi there!</h1>
+            <p>
+              I'm Meghan, a passionate junior Front-End Developer with a
+              background in data analytics. I recently graduated with a Bachelor
+              of Science in Computer Science and have a strong interest in UI/UX
+              design. I'm dedicated to creating visually stunning,
+              user-friendly, and accessible websites. Explore my work to see how
+              I combine precision and creativity to build engaging and effective
+              digital experiences.
+            </p>
+            <button class="hero-button">Get my resume</button>
+          </div>
+          <div class="hero-image">
+            <img src="/assets/hero_light.png" alt="hero image" />
+          </div>
+        </div>
+        <div class="next">
+          <i
+            class="icon bx bx-chevron-down bx-lg bx-fade-down bx-tada-hover"
+            onclick="scrollToSection('about')"
+          ></i>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section id="about" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>About Me</h1>
+            <p>
+              I'm Meghan, a frontend developer with a background in data
+              analytics. My portfolio showcases a blend of technical expertise
+              and creative solutions, from crafting visually captivating user
+              interfaces to delivering insightful data analyses. Explore my work
+              to see how I combine precision and creativity to build engaging
+              and effective digital experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Work Section -->
+      <section id="work" class="work-content">
+        <!-- {% for project in projects %}
+        <article class="card">
+          <img class="card-image" src="" />
+          <h1 class="card-title">{{ project.title }}</h1>
+          <h2 class="card-tagline">{{ project.tagline }}</h2>
+          <p class="card-description">{{ project.description }}</p>
+        </article>
+        {% endfor %} -->
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Reach Out</h1>
+            <p>
+              I'm Meghan, a frontend developer with a background in data
+              analytics. My portfolio showcases a blend of technical expertise
+              and creative solutions, from crafting visually captivating user
+              interfaces to delivering insightful data analyses. Explore my work
+              to see how I combine precision and creativity to build engaging
+              and effective digital experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <div class="goo-container"></div>
+    <svg>
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          <feColorMatrix
+            in="name"
+            mode="matrix"
+            values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 30 -15"
+          />
+          <feBlend in="SourceGraphic" />
+        </filter>
+      </defs>
+    </svg>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script defer src="/js/scripts.js"></script>
+    <script defer src="/js/darkmode.js"></script>
+  </body>
+</html>
