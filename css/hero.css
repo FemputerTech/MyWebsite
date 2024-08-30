@@ -10,7 +10,7 @@
 }
 
 .hero-text {
-  padding: 100px 20px;
+  padding: 100px 20px 0 20px;
   width: 54%;
 }
 
@@ -42,6 +42,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--text-normal);
+  text-decoration: none;
 }
 
 .icon:hover {
