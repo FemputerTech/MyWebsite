@@ -19,7 +19,7 @@ const enableDarkMode = () => {
   // 4. call gooDrips
   gooDrips();
   // 5. change hero image
-  heroImage.src = "/static/images/hero_dark.png";
+  heroImage.src = "/static/assets/images/hero_dark.png";
 };
 
 const disableDarkMode = () => {
@@ -34,7 +34,7 @@ const disableDarkMode = () => {
   // 4. clear goo drips
   gooContainer.innerHTML = "";
   // 5. change hero image
-  heroImage.src = "/static/images/hero_light.png";
+  heroImage.src = "/static/assets/images/hero_light.png";
 };
 
 // keeps dark mode enabled when we refresh
