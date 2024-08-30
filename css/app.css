@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: #8133ff;
   --primary-color-muted: #c49fff;
@@ -30,7 +34,7 @@
   --body-color: #1b1d1a;
   --goo: #2e5031;
 
-  --font-heading: "Creepster", system-ui;
+  /* --font-heading: "Creepster", system-ui; */
   --font-logo: "Nosifer", sans-serif;
 }
 
