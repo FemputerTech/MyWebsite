@@ -9,12 +9,12 @@
 }
 
 :root {
-  --primary-color: #9798bf;
-  --primary-color-light: #aeafdc;
+  --primary-color: #a268ff;
+  --primary-color-muted: #c4a1ff;
   --text-normal: #252322;
+  --text-faint: #f0eae2;
   --body-color: #f0eae2;
   --navbar-color: transparent;
-  --hover-color: var(--primary-color-light);
 
   --font-family: "Poppins", sans-serif;
   --font-heading: "Abril Fatface", serif;
@@ -22,11 +22,11 @@
 }
 
 .spooky {
-  --primary-color: #5abf35;
-  --primary-color-light: #71bf54;
+  --primary-color: #68ff78;
+  --primary-color-muted: #a1ffab;
   --text-normal: #f0eae2;
+  --text-faint: #1b1d1a;
   --body-color: #1b1d1a;
-  --hover-color: var(--primary-color-light);
   --goo: #394434;
 
   --font-heading: "Creepster", system-ui;
