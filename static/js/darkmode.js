@@ -1,6 +1,7 @@
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 const gooContainer = document.querySelector(".goo-container");
+const heroImage = document.querySelector(".hero-image img");
 
 // check if dark mode is enabled
 // if it's enabled, turn it off
@@ -17,6 +18,8 @@ const enableDarkMode = () => {
     .setAttribute("name", "moon");
   // 4. call gooDrips
   gooDrips();
+  // 5. change hero image
+  heroImage.src = "/static/images/hero_dark.png";
 };
 
 const disableDarkMode = () => {
@@ -30,6 +33,8 @@ const disableDarkMode = () => {
     .setAttribute("name", "sun");
   // 4. clear goo drips
   gooContainer.innerHTML = "";
+  // 5. change hero image
+  heroImage.src = "/static/images/hero_light.png";
 };
 
 // keeps dark mode enabled when we refresh
