@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,8 +10,8 @@
 }
 
 :root {
-  --primary-color: #a268ff;
-  --primary-color-muted: #c4a1ff;
+  --primary-color: #8133ff;
+  --primary-color-muted: #c49fff;
   --text-normal: #252322;
   --text-faint: #f0eae2;
   --body-color: #f0eae2;
@@ -18,19 +19,19 @@
 
   --font-family: "Poppins", sans-serif;
   --font-heading: "Abril Fatface", serif;
-  --logo-font-size: 22px;
+  --font-logo: "Nosifer", sans-serif;
 }
 
 .spooky {
-  --primary-color: #68ff78;
-  --primary-color-muted: #a1ffab;
+  --primary-color: #33ff48;
+  --primary-color-muted: #9fffa9;
   --text-normal: #f0eae2;
   --text-faint: #1b1d1a;
   --body-color: #1b1d1a;
-  --goo: #394434;
+  --goo: #2e5031;
 
   --font-heading: "Creepster", system-ui;
-  --logo-font-size: 28px;
+  --font-logo: "Nosifer", sans-serif;
 }
 
 body {

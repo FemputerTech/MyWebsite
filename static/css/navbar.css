@@ -11,8 +11,8 @@
 }
 
 .logo-text {
-  font-family: var(--font-heading);
-  font-size: var(--logo-font-size);
+  font-family: var(--font-logo);
+  font-size: 22px;
   font-weight: 100;
 }
 
