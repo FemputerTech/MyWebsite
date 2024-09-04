@@ -43,6 +43,10 @@ body {
   grid-template-columns: 100px 1fr;
   grid-template-rows: 140px 1fr 140px;
   background-color: var(--body-color);
+  color: var(--text-normal);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 300;
   height: 100%;
 }
 
@@ -50,6 +54,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background-color: var(--goo); */
   background-color: aqua;
   padding: 20px;
   margin-bottom: 60px;
@@ -58,7 +63,26 @@ header {
 
 .sidebar {
   background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   margin-right: 20px;
+}
+
+.social-links {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: chocolate;
+  padding: 10px;
+  bottom: 0;
+}
+
+.social-links a {
+  margin: 10px 0;
+  color: var(--text-normal);
+  text-decoration: none;
 }
 
 main {
@@ -67,6 +91,10 @@ main {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--goo); */
   background-color: #33ff48;
   margin-top: 60px;
   grid-column: 1 / 3;
