@@ -44,16 +44,17 @@ nav {
   align-items: center;
   align-self: stretch;
   color: var(--text-normal);
+  border-radius: 50px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 0 20px;
+  transition: background-color 0.5s ease;
 }
 
 .nav-link:hover {
   background-color: var(--primary-color);
   color: var(--text-faint);
-  border-radius: 50px;
 }
 
 .dark-mode-toggle {
