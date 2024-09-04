@@ -1,11 +1,13 @@
 .social-links {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   bottom: 0;
-  right: 0;
-  margin-bottom: 20px;
+  left: 0;
+  margin-left: 20px;
 }
 
 .social-links a {
   text-decoration: none;
-  margin: 0 20px;
+  margin: 10px 0;
 }
