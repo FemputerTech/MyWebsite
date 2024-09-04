@@ -19,7 +19,10 @@ const disableDarkMode = () => {
   document
     .querySelector(".dark-mode-toggle box-icon")
     .setAttribute("name", "sun");
-  gooContainer.innerHTML = "";
+  // Remove all drip elements
+  document.querySelectorAll(".drip").forEach((drip) => {
+    drip.remove();
+  });
   heroImage.src = "/assets/hero_light.png";
 };
 
