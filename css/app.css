@@ -39,6 +39,7 @@ html {
 }
 
 body {
+  position: relative;
   display: grid;
   grid-template-columns: 100px 1fr;
   grid-template-rows: 140px 1fr 140px;
