@@ -1,0 +1,11 @@
+.social-links {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  margin: 0 20px;
+}
