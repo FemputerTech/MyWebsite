@@ -53,6 +53,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--goo);
+  margin-bottom: 60px;
   padding: 20px;
   width: 100%;
   height: 80px;
@@ -68,6 +69,7 @@ main {
 
 footer {
   background-color: var(--goo);
+  margin-top: 60px;
   width: 100%;
   height: 80px;
   bottom: 0;
