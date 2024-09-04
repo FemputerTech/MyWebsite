@@ -1,0 +1,17 @@
+/* ****************** Contact ****************** */
+.contact {
+  padding: 0 40px;
+}
+
+.contact h1 {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 24px;
+}

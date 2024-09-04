@@ -1,0 +1,17 @@
+/* ****************** About ****************** */
+.about {
+  padding: 0 40px;
+}
+
+.about h1 {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
