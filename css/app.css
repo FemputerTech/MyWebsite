@@ -51,6 +51,53 @@ body {
   height: 100%;
 }
 
+.overlay {
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    var(--goo) 96%,
+    rgba(0, 255, 255, 0) 100%
+  );
+  overflow: hidden;
+  top: 0;
+  width: 110%;
+  height: 80px;
+  animation: fadeIn 4s linear;
+}
+
+.logo-icon {
+  position: absolute;
+  right: 40px;
+  animation: bounce 1s infinite forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;
