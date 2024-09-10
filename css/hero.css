@@ -98,3 +98,46 @@
 .hero-text .line:nth-child(3) {
   animation-delay: 2s;
 }
+
+.icon-animation {
+  animation: fadeDown 1.4s ease-in-out infinite;
+}
+
+.icon-animation:hover {
+  animation: tada 1.4s ease-in-out infinite;
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes tada {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
