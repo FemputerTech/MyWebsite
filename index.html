@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="/css/contact.css" />
     <link rel="stylesheet" href="/css/goo.css" />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
       rel="icon"
       href="{{ url_for('static', filename='favicon.ico') }}"
       type="image/x-icon"
@@ -47,21 +43,18 @@
       </div>
     </div>
     <div class="overlay">
-      <box-icon
-        class="logo-icon"
-        color="var(--text-normal)"
-        name="ghost"
-      ></box-icon>
+      <i
+        class="fa-solid fa-ghost fa-lg logo-icon"
+        style="color: var(--text-normal)"
+      ></i>
     </div>
-    <!-- <div class="fade-in-overlay"></div> -->
     <header>
       <a class="logo" href="#">
         <!-- <img class="logo-image" src="" alt="logo" /> -->
-        <box-icon
-          class="logo-image"
-          color="var(--text-normal)"
-          name="ghost"
-        ></box-icon>
+        <i
+          class="fa-solid fa-ghost fa-lg logo-image"
+          style="color: var(--text-normal)"
+        ></i>
         <!-- placeholder icon -->
         <span class="logo-text">FemputerTech</span>
       </a>
@@ -91,11 +84,10 @@
           class="dark-mode-toggle"
           aria-label="toggle dark mode"
         >
-          <box-icon
-            color="var(--text-normal)"
-            type="solid"
-            name="sun"
-          ></box-icon>
+          <i
+            class="fa-solid fa-sun fa-lg"
+            style="color: var(--text-normal)"
+          ></i>
         </button>
       </nav>
     </header>
@@ -106,31 +98,17 @@
           target="_blank"
           aria-label="GitHub"
         >
-          <box-icon
-            color="var(--text-normal)"
-            type="logo"
-            name="github"
-            size="md"
-          ></box-icon>
+          <i class="fa-brands fa-github fa-2xl"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/meghan-leicht"
           target="_blank"
           aria-label="LinkedIn"
         >
-          <box-icon
-            color="var(--text-normal)"
-            type="logo"
-            name="linkedin-square"
-            size="md"
-          ></box-icon>
+          <i class="fa-brands fa-linkedin fa-2xl"></i>
         </a>
         <a href="mailto:mleicht92@gmail.com" target="_blank" aria-label="Email">
-          <box-icon
-            color="var(--text-normal)"
-            name="envelope"
-            size="md"
-          ></box-icon>
+          <i class="fa-regular fa-envelope fa-2xl"></i>
         </a>
       </div>
     </section>
@@ -224,7 +202,10 @@
         </filter>
       </defs>
     </svg>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2872694500.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="/js/scripts.js"></script>
     <script defer src="/js/darkmode.js"></script>
   </body>

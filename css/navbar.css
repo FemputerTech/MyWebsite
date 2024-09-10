@@ -1,15 +1,11 @@
 /* ****************** Navbar ****************** */
 .logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   align-self: stretch;
   color: var(--text-normal);
   text-decoration: none;
-}
-
-.logo-image {
-  width: 40px;
+  gap: 10px;
 }
 
 .logo-text {

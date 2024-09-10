@@ -7,8 +7,8 @@ const enableDarkMode = () => {
   document.body.classList.add("spooky");
   localStorage.setItem("darkMode", "enabled");
   document
-    .querySelector(".dark-mode-toggle box-icon")
-    .setAttribute("name", "moon");
+    .querySelector(".dark-mode-toggle i")
+    .setAttribute("class", "fa-solid fa-moon fa-lg");
   gooDrips();
   heroImage.src = "/assets/hero_dark.png";
 };
@@ -17,8 +17,8 @@ const disableDarkMode = () => {
   document.body.classList.remove("spooky");
   localStorage.setItem("darkMode", null);
   document
-    .querySelector(".dark-mode-toggle box-icon")
-    .setAttribute("name", "sun");
+    .querySelector(".dark-mode-toggle i")
+    .setAttribute("class", "fa-solid fa-sun fa-lg");
   // Remove all drip elements
   document.querySelectorAll(".drip").forEach((drip) => {
     drip.remove();
