@@ -1,63 +1,73 @@
 /* ****************** Navbar ****************** */
-.logo {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-  color: var(--text-normal);
-  text-decoration: none;
-  gap: 10px;
-}
-
-.logo-text {
-  font-family: var(--font-logo);
-  font-size: 22px;
-  font-weight: 100;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-  list-style-type: none;
-  margin-right: 20px;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-  margin-left: 20px;
-}
-
 .nav-link {
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-  color: var(--text-normal);
-  border-radius: 50px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 0 20px;
-  transition: background-color 0.5s ease;
+  display: none;
 }
 
-.nav-link:hover {
-  background-color: var(--primary-color);
-  color: var(--text-faint);
-}
+@media (min-width: 481px) {
+  .logo {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    color: var(--text-normal);
+    text-decoration: none;
+    gap: 10px;
+  }
 
-.dark-mode-toggle {
-  background-color: transparent;
-  border: none;
-}
+  .logo-text {
+    font-family: var(--font-logo);
+    font-size: 22px;
+    font-weight: 100;
+  }
 
-.dark-mode-toggle:hover {
-  cursor: pointer;
+  nav {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    list-style-type: none;
+    margin-right: 20px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    margin-left: 20px;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    color: var(--text-normal);
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 20px;
+    transition: background-color 0.5s ease;
+  }
+
+  .nav-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-faint);
+  }
+
+  .dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+  }
+
+  .dark-mode-toggle:hover {
+    cursor: pointer;
+  }
 }
