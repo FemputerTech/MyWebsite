@@ -112,7 +112,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-right: 20px;
 }
 
 .social-links {
@@ -138,6 +137,7 @@ header {
 
 main {
   min-height: calc(100vh - 140px);
+  margin-right: 100px;
 }
 
 footer {

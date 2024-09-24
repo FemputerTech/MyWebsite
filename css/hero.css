@@ -21,13 +21,12 @@
   font-family: var(--font-heading);
   font-size: 64px;
   font-weight: 400;
-  margin-bottom: 10px;
 }
 
 .hero-text p {
   font-size: 20px;
   line-height: 36px;
-  margin-bottom: 24px;
+  padding: 20px 0;
 }
 
 .hero-button {
