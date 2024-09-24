@@ -139,7 +139,7 @@
   }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 768px) {
   .hero {
     height: calc(100vh - 170px);
   }

@@ -52,7 +52,7 @@ nav {
   display: none;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 768px) {
   .logo {
     align-self: stretch;
   }
