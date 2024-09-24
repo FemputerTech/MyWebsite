@@ -4,7 +4,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 140px;
   width: 100%;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 170px);
 }
 
 .hero-content {
