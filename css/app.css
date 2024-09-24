@@ -137,7 +137,8 @@ header {
 
 main {
   min-height: calc(100vh - 140px);
-  margin-right: 100px;
+  margin-right: 200px;
+  margin-left: 100px;
 }
 
 footer {
