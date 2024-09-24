@@ -2,16 +2,15 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 100px;
+  grid-template-rows: auto 140px;
   width: 100%;
   height: calc(100vh - 140px);
 }
 
 .hero-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
   /* background-color: pink; */
 }
 
