@@ -5,6 +5,13 @@ import "./styles/hero.css";
 import "./styles/main.css";
 import "./styles/navbar.css";
 import "./styles/work.css";
+import heroPNG from "./assets/hero.png";
+import resumePDF from "./assets/Meghan_Leicht_Resume_Web_Developer.pdf";
+
+const heroImageMeghan = document.getElementById("hero-image-meghan");
+heroImageMeghan.src = heroPNG;
+const resume = document.getElementById("resume");
+resume.href = resumePDF;
 
 document
   .querySelector(".overlay")
