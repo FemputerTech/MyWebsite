@@ -4,19 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FemputerTech</title>
-    <link rel="stylesheet" href="/css/app.css" />
-    <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/hero.css" />
-    <link rel="stylesheet" href="/css/about.css" />
-    <link rel="stylesheet" href="/css/work.css" />
-    <link rel="stylesheet" href="/css/contact.css" />
-    <link rel="stylesheet" href="/css/goo.css" />
     <link
       rel="icon"
       href="{{ url_for('static', filename='favicon.ico') }}"
       type="image/x-icon"
     />
-  </head>
+  <script defer src="bundle.js"></script></head>
   <body>
     <div class="goo-container">
       <div class="border">
@@ -78,7 +71,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="/assets/Meghan_Leicht_Resume_Web_Developer.pdf"
+              href="../src/assets/Meghan_Leicht_Resume_Web_Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               >Resume</a
@@ -130,7 +123,7 @@
             </p>
             <button
               class="hero-button line"
-              onclick="window.open('/assets/Meghan_Leicht_Resume_Web_Developer.pdf')"
+              onclick="window.open('../src/assets/Meghan_Leicht_Resume_Web_Developer.pdf')"
               rel="noopener noreferrer"
             >
               Get my resume
@@ -139,7 +132,7 @@
 
           <div class="hero-image">
             <img
-              src="/assets/hero_light.png"
+              src="../src/assets/hero_light.png"
               aria-label="meghan typing on the computer"
             />
           </div>
@@ -211,7 +204,5 @@
       src="https://kit.fontawesome.com/2872694500.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="/js/scripts.js"></script>
-    <script defer src="/js/darkmode.js"></script>
   </body>
 </html>

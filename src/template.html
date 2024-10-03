@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="goo-container">
+      <div class="border">
+        <svg
+          class="svg-top"
+          viewBox="0 0 1440 320"
+          width="100%"
+          height="100%"
+          preserveAspectRatio="none"
+        >
+          <use href="#goo-border"></use>
+        </svg>
+      </div>
+      <div class="border">
+        <svg
+          class="svg-bottom"
+          viewBox="0 0 1440 320"
+          width="100%"
+          height="100%"
+          preserveAspectRatio="none"
+        >
+          <use href="#goo-border"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="overlay">
+      <i
+        class="fa-solid fa-ghost fa-lg logo-icon"
+        style="color: var(--text-normal)"
+      ></i>
+    </div>
+    <header>
+      <a class="logo" href="#">
+        <!-- <img class="logo-image" src="" alt="logo" /> -->
+        <i
+          class="fa-solid fa-ghost fa-lg logo-image"
+          style="color: var(--text-normal)"
+        ></i>
+        <!-- placeholder icon -->
+        <span class="logo-text">FemputerTech</span>
+      </a>
+      <nav>
+        <div class="navbar-toggle" onclick="toggleNavList()">
+          <i
+            class="fa-solid fa-bars fa-lg"
+            style="color: var(--text-normal)"
+          ></i>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../src/assets/Meghan_Leicht_Resume_Web_Developer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Resume</a
+            >
+          </li>
+        </ul>
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="toggle dark mode"
+        >
+          <i
+            class="fa-solid fa-sun fa-lg"
+            style="color: var(--text-normal)"
+          ></i>
+        </button>
+      </nav>
+    </header>
+    <section class="sidebar">
+      <div class="social-links">
+        <a
+          href="https://github.com/FemputerTech"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/meghan-leicht"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin fa-2xl"></i>
+        </a>
+        <a href="mailto:mleicht92@gmail.com" target="_blank" aria-label="Email">
+          <i class="fa-regular fa-envelope fa-2xl"></i>
+        </a>
+      </div>
+    </section>
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="line">Hi there!</h1>
+            <p class="line">
+              Crafting engaging web experiences with a user-centric approach.
+              Together, let’s solve problems and create designs that inspire.
+            </p>
+            <button
+              class="hero-button line"
+              onclick="window.open('../src/assets/Meghan_Leicht_Resume_Web_Developer.pdf')"
+              rel="noopener noreferrer"
+            >
+              Get my resume
+            </button>
+          </div>
+
+          <div class="hero-image">
+            <img
+              src="../src/assets/hero_light.png"
+              aria-label="meghan typing on the computer"
+            />
+          </div>
+        </div>
+        <a class="next" href="#about" aria-label="Scroll to About section">
+          <i class="fa-solid fa-angle-down fa-2xl icon-animation"></i>
+        </a>
+      </section>
+      <!-- About Section -->
+      <section id="about" class="about">
+        <h1>About Me</h1>
+        <p>
+          I'm Meghan, a passionate junior Front-End Developer with a background
+          in data analytics. I recently graduated with a Bachelor of Science in
+          Computer Science and have a strong interest in UI/UX design. I'm
+          dedicated to creating visually stunning, user-friendly, and accessible
+          websites. Explore my work to see how I combine precision and
+          creativity to build engaging and effective digital experiences.
+        </p>
+      </section>
+      <!-- Work Section -->
+      <section id="work" class="work">
+        <h1>My Projects</h1>
+        <a href="https://mealplanner-luizsfhgza-uw.a.run.app" target="_blank"
+          >BeetEats</a
+        >
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h1>Reach Out</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+          officiis numquam rem dolorem repellat, animi voluptatum vel fuga
+          aliquam consectetur quasi nesciunt sapiente commodi nemo quis unde
+          adipisci temporibus consequatur!
+        </p>
+      </section>
+    </main>
+    <footer><p>&copy; 2024 FemputerTech. All rights reserved.</p></footer>
+    <!-- svgs -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="goo-border">
+          <path
+            fill="var(--goo)"
+            fill-opacity="1"
+            d="M0,256L8.3,213.3C16.6,171,33,85,50,90.7C66.2,96,83,192,99,234.7C115.9,277,132,267,149,261.3C165.5,256,182,256,199,213.3C215.2,171,232,85,248,74.7C264.8,64,281,128,298,138.7C314.5,149,331,107,348,128C364.1,149,381,235,397,256C413.8,277,430,235,447,229.3C463.4,224,480,256,497,224C513.1,192,530,96,546,64C562.8,32,579,64,596,80C612.4,96,629,96,646,112C662.1,128,679,160,695,192C711.7,224,728,256,745,266.7C761.4,277,778,267,794,245.3C811,224,828,192,844,197.3C860.7,203,877,245,894,229.3C910.3,213,927,139,943,112C960,85,977,107,993,106.7C1009.7,107,1026,85,1043,69.3C1059.3,53,1076,43,1092,74.7C1109,107,1126,181,1142,192C1158.6,203,1175,149,1192,128C1208.3,107,1225,117,1241,122.7C1257.9,128,1274,128,1291,154.7C1307.6,181,1324,235,1341,261.3C1357.2,288,1374,288,1390,266.7C1406.9,245,1423,203,1432,181.3L1440,160L1440,0L1431.7,0C1423.4,0,1407,0,1390,0C1373.8,0,1357,0,1341,0C1324.1,0,1308,0,1291,0C1274.5,0,1258,0,1241,0C1224.8,0,1208,0,1192,0C1175.2,0,1159,0,1142,0C1125.5,0,1109,0,1092,0C1075.9,0,1059,0,1043,0C1026.2,0,1010,0,993,0C976.6,0,960,0,943,0C926.9,0,910,0,894,0C877.2,0,861,0,844,0C827.6,0,811,0,794,0C777.9,0,761,0,745,0C728.3,0,712,0,695,0C678.6,0,662,0,646,0C629,0,612,0,596,0C579.3,0,563,0,546,0C529.7,0,513,0,497,0C480,0,463,0,447,0C430.3,0,414,0,397,0C380.7,0,364,0,348,0C331,0,314,0,298,0C281.4,0,265,0,248,0C231.7,0,215,0,199,0C182.1,0,166,0,149,0C132.4,0,116,0,99,0C82.8,0,66,0,50,0C33.1,0,17,0,8,0L0,0Z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <svg style="display: none">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          <feColorMatrix
+            in="name"
+            mode="matrix"
+            values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 30 -15"
+          />
+          <feBlend in="SourceGraphic" />
+        </filter>
+      </defs>
+    </svg>
+    <script
+      src="https://kit.fontawesome.com/2872694500.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

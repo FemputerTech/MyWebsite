@@ -1,3 +1,28 @@
+import "./styles/about.css";
+import "./styles/contact.css";
+import "./styles/goo.css";
+import "./styles/hero.css";
+import "./styles/main.css";
+import "./styles/navbar.css";
+import "./styles/work.css";
+
+document
+  .querySelector(".overlay")
+  .addEventListener("animationend", function () {
+    this.style.display = "none"; // Hide the div after the animation ends
+  });
+
+function toggleNavList() {
+  const navList = document.querySelector(".nav-list");
+
+  if (navList.style.display === "") {
+    navList.style.display = "flex";
+  } else {
+    navList.style.display = "";
+  }
+}
+
+// DARK MODE
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 const gooContainer = document.querySelector(".goo-container");
@@ -10,7 +35,7 @@ const enableDarkMode = () => {
     .querySelector(".dark-mode-toggle i")
     .setAttribute("class", "fa-solid fa-moon fa-lg");
   gooDrips();
-  heroImage.src = "/assets/hero_dark.png";
+  heroImage.src = "../src/assets/hero_dark.png";
 };
 
 const disableDarkMode = () => {
@@ -23,7 +48,7 @@ const disableDarkMode = () => {
   document.querySelectorAll(".drip").forEach((drip) => {
     drip.remove();
   });
-  heroImage.src = "/assets/hero_light.png";
+  heroImage.src = "../src/assets/hero_light.png";
 };
 
 if (darkMode === "enabled") {
