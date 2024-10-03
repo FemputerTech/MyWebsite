@@ -27,8 +27,6 @@ html {
 }
 
 .spooky {
-  --primary-color: #33ff48;
-  --primary-color-muted: #9fffa9;
   --text-normal: #f0eae2;
   --text-faint: #1b1d1a;
   --body-color: #1b1d1a;

@@ -35,7 +35,6 @@ const enableDarkMode = () => {
     .querySelector(".dark-mode-toggle i")
     .setAttribute("class", "fa-solid fa-moon fa-lg");
   gooDrips();
-  heroImage.src = "../src/assets/hero_dark.png";
 };
 
 const disableDarkMode = () => {
@@ -48,7 +47,6 @@ const disableDarkMode = () => {
   document.querySelectorAll(".drip").forEach((drip) => {
     drip.remove();
   });
-  heroImage.src = "../src/assets/hero_light.png";
 };
 
 if (darkMode === "enabled") {
