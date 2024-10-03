@@ -236,7 +236,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_about_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/about.css */ \"./src/styles/about.css\");\n/* harmony import */ var _styles_contact_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/contact.css */ \"./src/styles/contact.css\");\n/* harmony import */ var _styles_goo_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/goo.css */ \"./src/styles/goo.css\");\n/* harmony import */ var _styles_hero_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/hero.css */ \"./src/styles/hero.css\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _styles_navbar_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/navbar.css */ \"./src/styles/navbar.css\");\n/* harmony import */ var _styles_work_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/work.css */ \"./src/styles/work.css\");\n\n\n\n\n\n\n\n\ndocument\n  .querySelector(\".overlay\")\n  .addEventListener(\"animationend\", function () {\n    this.style.display = \"none\"; // Hide the div after the animation ends\n  });\n\nfunction toggleNavList() {\n  const navList = document.querySelector(\".nav-list\");\n\n  if (navList.style.display === \"\") {\n    navList.style.display = \"flex\";\n  } else {\n    navList.style.display = \"\";\n  }\n}\n\n// DARK MODE\nlet darkMode = localStorage.getItem(\"darkMode\");\nconst darkModeToggle = document.querySelector(\"#dark-mode-toggle\");\nconst gooContainer = document.querySelector(\".goo-container\");\nconst heroImage = document.querySelector(\".hero-image img\");\n\nconst enableDarkMode = () => {\n  document.body.classList.add(\"spooky\");\n  localStorage.setItem(\"darkMode\", \"enabled\");\n  document\n    .querySelector(\".dark-mode-toggle i\")\n    .setAttribute(\"class\", \"fa-solid fa-moon fa-lg\");\n  gooDrips();\n};\n\nconst disableDarkMode = () => {\n  document.body.classList.remove(\"spooky\");\n  localStorage.setItem(\"darkMode\", null);\n  document\n    .querySelector(\".dark-mode-toggle i\")\n    .setAttribute(\"class\", \"fa-solid fa-sun fa-lg\");\n  // Remove all drip elements\n  document.querySelectorAll(\".drip\").forEach((drip) => {\n    drip.remove();\n  });\n};\n\nif (darkMode === \"enabled\") {\n  enableDarkMode();\n}\n\ndarkModeToggle.addEventListener(\"click\", () => {\n  darkMode = localStorage.getItem(\"darkMode\");\n  if (darkMode !== \"enabled\") {\n    enableDarkMode();\n  } else {\n    disableDarkMode();\n  }\n});\n\nfunction gooDrips() {\n  const gooContainer = document.querySelector(\".goo-container\");\n  const numDrips = 20;\n  const minSize = 120;\n  const maxSize = 240;\n\n  // Creating the drips\n  for (let i = 0; i < numDrips; i++) {\n    const drip = document.createElement(\"div\");\n    const size = Math.random() * (maxSize - minSize) + minSize;\n\n    // Create SVG element for each drip\n    const svgElement = document.createElementNS(\n      \"http://www.w3.org/2000/svg\",\n      \"svg\"\n    );\n    svgElement.setAttribute(\"width\", `${size}`);\n    svgElement.setAttribute(\"height\", `${size}`);\n    svgElement.setAttribute(\"viewBox\", \"0 0 200 200\");\n    svgElement.setAttribute(\"xmlns\", \"http://www.w3.org/2000/svg\");\n\n    const pathElement = document.createElementNS(\n      \"http://www.w3.org/2000/svg\",\n      \"path\"\n    );\n    pathElement.setAttribute(\"fill\", \"var(--goo)\");\n    pathElement.setAttribute(\n      \"d\",\n      \"M35.7,-16.7C39.8,0.8,32,17.1,20,25.3C8.1,33.4,-8.1,33.4,-18.5,25.8C-28.8,18.2,-33.4,2.9,-29.3,-14.6C-25.3,-32.1,-12.6,-52,1.6,-52.5C15.8,-53,31.7,-34.2,35.7,-16.7Z\"\n    );\n    pathElement.setAttribute(\"transform\", \"translate(100 100)\");\n\n    svgElement.appendChild(pathElement);\n    drip.appendChild(svgElement);\n\n    // Randomly decide if the drip should be flipped vertically\n    if (Math.random() > 0.5) {\n      svgElement.style.transform = \"scaleX(-1)\";\n    }\n\n    drip.classList.add(\"drip\");\n    drip.style.width = `${size}px`; // Random width between 60px and 120px\n    drip.style.height = `${size}px`; // Keep it a circle for now\n    drip.style.left = `${Math.random() * 100}%`; // Random position between 0% and 100%\n    drip.style.animationDelay = `${1 * (i + 1)}s`;\n\n    gooContainer.appendChild(drip);\n  }\n}\n\n\n//# sourceURL=webpack://mywebsite/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_about_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/about.css */ \"./src/styles/about.css\");\n/* harmony import */ var _styles_contact_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/contact.css */ \"./src/styles/contact.css\");\n/* harmony import */ var _styles_goo_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/goo.css */ \"./src/styles/goo.css\");\n/* harmony import */ var _styles_hero_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/hero.css */ \"./src/styles/hero.css\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _styles_navbar_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/navbar.css */ \"./src/styles/navbar.css\");\n/* harmony import */ var _styles_work_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/work.css */ \"./src/styles/work.css\");\n/* harmony import */ var _assets_hero_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/hero.png */ \"./src/assets/hero.png\");\n\n\n\n\n\n\n\n\n\ndocument\n  .querySelector(\".overlay\")\n  .addEventListener(\"animationend\", function () {\n    this.style.display = \"none\"; // Hide the div after the animation ends\n  });\n\nfunction toggleNavList() {\n  const navList = document.querySelector(\".nav-list\");\n\n  if (navList.style.display === \"\") {\n    navList.style.display = \"flex\";\n  } else {\n    navList.style.display = \"\";\n  }\n}\n\n// DARK MODE\nlet darkMode = localStorage.getItem(\"darkMode\");\nconst darkModeToggle = document.querySelector(\"#dark-mode-toggle\");\nconst gooContainer = document.querySelector(\".goo-container\");\nconst heroImage = document.querySelector(\".hero-image img\");\n\nconst enableDarkMode = () => {\n  document.body.classList.add(\"spooky\");\n  localStorage.setItem(\"darkMode\", \"enabled\");\n  document\n    .querySelector(\".dark-mode-toggle i\")\n    .setAttribute(\"class\", \"fa-solid fa-moon fa-lg\");\n  gooDrips();\n};\n\nconst disableDarkMode = () => {\n  document.body.classList.remove(\"spooky\");\n  localStorage.setItem(\"darkMode\", null);\n  document\n    .querySelector(\".dark-mode-toggle i\")\n    .setAttribute(\"class\", \"fa-solid fa-sun fa-lg\");\n  // Remove all drip elements\n  document.querySelectorAll(\".drip\").forEach((drip) => {\n    drip.remove();\n  });\n};\n\nif (darkMode === \"enabled\") {\n  enableDarkMode();\n}\n\ndarkModeToggle.addEventListener(\"click\", () => {\n  darkMode = localStorage.getItem(\"darkMode\");\n  if (darkMode !== \"enabled\") {\n    enableDarkMode();\n  } else {\n    disableDarkMode();\n  }\n});\n\nfunction gooDrips() {\n  const gooContainer = document.querySelector(\".goo-container\");\n  const numDrips = 20;\n  const minSize = 120;\n  const maxSize = 240;\n\n  // Creating the drips\n  for (let i = 0; i < numDrips; i++) {\n    const drip = document.createElement(\"div\");\n    const size = Math.random() * (maxSize - minSize) + minSize;\n\n    // Create SVG element for each drip\n    const svgElement = document.createElementNS(\n      \"http://www.w3.org/2000/svg\",\n      \"svg\"\n    );\n    svgElement.setAttribute(\"width\", `${size}`);\n    svgElement.setAttribute(\"height\", `${size}`);\n    svgElement.setAttribute(\"viewBox\", \"0 0 200 200\");\n    svgElement.setAttribute(\"xmlns\", \"http://www.w3.org/2000/svg\");\n\n    const pathElement = document.createElementNS(\n      \"http://www.w3.org/2000/svg\",\n      \"path\"\n    );\n    pathElement.setAttribute(\"fill\", \"var(--goo)\");\n    pathElement.setAttribute(\n      \"d\",\n      \"M35.7,-16.7C39.8,0.8,32,17.1,20,25.3C8.1,33.4,-8.1,33.4,-18.5,25.8C-28.8,18.2,-33.4,2.9,-29.3,-14.6C-25.3,-32.1,-12.6,-52,1.6,-52.5C15.8,-53,31.7,-34.2,35.7,-16.7Z\"\n    );\n    pathElement.setAttribute(\"transform\", \"translate(100 100)\");\n\n    svgElement.appendChild(pathElement);\n    drip.appendChild(svgElement);\n\n    // Randomly decide if the drip should be flipped vertically\n    if (Math.random() > 0.5) {\n      svgElement.style.transform = \"scaleX(-1)\";\n    }\n\n    drip.classList.add(\"drip\");\n    drip.style.width = `${size}px`; // Random width between 60px and 120px\n    drip.style.height = `${size}px`; // Keep it a circle for now\n    drip.style.left = `${Math.random() * 100}%`; // Random position between 0% and 100%\n    drip.style.animationDelay = `${1 * (i + 1)}s`;\n\n    gooContainer.appendChild(drip);\n  }\n}\n\n\n//# sourceURL=webpack://mywebsite/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/hero.png":
+/*!*****************************!*\
+  !*** ./src/assets/hero.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"hero.png\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/hero.png?");
 
 /***/ })
 
@@ -291,6 +301,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -305,6 +327,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
