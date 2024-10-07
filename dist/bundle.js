@@ -273,6 +273,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/assets/project_images sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./src/assets/project_images/ sync ^\.\/.*$ ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var map = {\n\t\"./BeetEats.png\": \"./src/assets/project_images/BeetEats.png\",\n\t\"./BeetEatsDevice.png\": \"./src/assets/project_images/BeetEatsDevice.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/project_images sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/project_images/_sync_^\\.\\/.*$?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -280,7 +290,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_components_about_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/components/about.css */ \"./src/styles/components/about.css\");\n/* harmony import */ var _styles_components_contact_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/components/contact.css */ \"./src/styles/components/contact.css\");\n/* harmony import */ var _styles_components_goo_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/components/goo.css */ \"./src/styles/components/goo.css\");\n/* harmony import */ var _styles_components_hero_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/components/hero.css */ \"./src/styles/components/hero.css\");\n/* harmony import */ var _styles_components_skills_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/components/skills.css */ \"./src/styles/components/skills.css\");\n/* harmony import */ var _js_components_navbar_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/components/navbar.js */ \"./src/js/components/navbar.js\");\n/* harmony import */ var _js_components_border_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/components/border.js */ \"./src/js/components/border.js\");\n/* harmony import */ var _js_components_border_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_components_border_js__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _js_components_work_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/components/work.js */ \"./src/js/components/work.js\");\n/* harmony import */ var _assets_hero_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/hero.png */ \"./src/assets/hero.png\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n// index.js\n\n\n\n\n\n\n\n\n\n// import \"./js/darkmode.js\";\n\n// import beetEatsPNG from \"./assets/project_images/BeetEats.png\";\n// import resumePDF from \"./assets/Meghan_Leicht_Resume_Web_Developer.pdf\";\n\n\nconst heroImageMeghan = document.getElementById(\"hero-image-meghan\");\nheroImageMeghan.src = _assets_hero_png__WEBPACK_IMPORTED_MODULE_8__;\n\n// const beatEatsImage = document.getElementById(\"beeteats-image\");\n// beatEatsImage.src = beetEatsPNG;\n\n\n//# sourceURL=webpack://mywebsite/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_components_about_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/components/about.css */ \"./src/styles/components/about.css\");\n/* harmony import */ var _styles_components_contact_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/components/contact.css */ \"./src/styles/components/contact.css\");\n/* harmony import */ var _styles_components_goo_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/components/goo.css */ \"./src/styles/components/goo.css\");\n/* harmony import */ var _styles_components_hero_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/components/hero.css */ \"./src/styles/components/hero.css\");\n/* harmony import */ var _styles_components_skills_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/components/skills.css */ \"./src/styles/components/skills.css\");\n/* harmony import */ var _js_components_navbar_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/components/navbar.js */ \"./src/js/components/navbar.js\");\n/* harmony import */ var _js_components_border_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/components/border.js */ \"./src/js/components/border.js\");\n/* harmony import */ var _js_components_border_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_components_border_js__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _js_components_work_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/components/work.js */ \"./src/js/components/work.js\");\n/* harmony import */ var _assets_hero_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/hero.png */ \"./src/assets/hero.png\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n// index.js\n\n\n\n\n\n\n\n\n\n// import \"./js/darkmode.js\";\n\n// import resumePDF from \"./assets/Meghan_Leicht_Resume_Web_Developer.pdf\";\n\n\nconst heroImageMeghan = document.getElementById(\"hero-image-meghan\");\nheroImageMeghan.src = _assets_hero_png__WEBPACK_IMPORTED_MODULE_8__;\n\n\n//# sourceURL=webpack://mywebsite/./src/index.js?");
 
 /***/ }),
 
@@ -312,7 +322,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _projects_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../projects.json */ \"./src/projects.json\");\n/* harmony import */ var _styles_components_work_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/components/work.css */ \"./src/styles/components/work.css\");\n// work.js\n\n\n\nconst renderProjects = () => {\n  const workSection = document.querySelector(\".work\");\n  workSection.innerHTML = \"\";\n  _projects_json__WEBPACK_IMPORTED_MODULE_0__.forEach((project) => {\n    const imagePath = new URL(project.image, \"file:///Users/meghanleicht/Documents/Projects/MyWebsite/src/js/components/work.js\").href;\n    console.log(imagePath);\n    workSection.innerHTML = `\n        <div class=\"project\">\n          <div class=\"project-image\">\n            <a\n              href=\"${project.link}\"\n              target=\"_blank\"\n            >\n              <img src=\"${imagePath}\" id=\"${project.id}\" aria-label=\"${project.label}\" />\n            </a>\n          </div>\n          <div class=\"project-content\">\n            <h2 class=\"project-title\">${project.title}</h2>\n            <p>${project.description}</p>\n          </div>\n        </div>\n    `;\n  });\n};\n\nrenderProjects();\n\n\n//# sourceURL=webpack://mywebsite/./src/js/components/work.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _projects_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../projects.json */ \"./src/projects.json\");\n/* harmony import */ var _styles_components_work_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/components/work.css */ \"./src/styles/components/work.css\");\n// work.js\n\n\n\nconst renderProjects = () => {\n  const projectsList = document.querySelector(\".projects-list\");\n  projectsList.innerHTML = \"\";\n  _projects_json__WEBPACK_IMPORTED_MODULE_0__.forEach((project) => {\n    const projectDiv = document.createElement(\"div\");\n    const imagePath = __webpack_require__(\"./src/assets/project_images sync recursive ^\\\\.\\\\/.*$\")(`./${project.image}`);\n    projectDiv.className = \"project\";\n    projectDiv.innerHTML = `\n          <div class=\"project-image\">\n            <a\n              href=\"${project.link}\"\n              target=\"_blank\"\n            >\n              <img src=\"${imagePath}\" id=\"${project.id}\" aria-label=\"${\n      project.label\n    }\" />\n            </a>\n          </div>\n          <div class=\"project-content\">\n            <h2 class=\"project-title\">${project.title}</h2>\n            <h3>Technologies: <span class=\"technologies\">${project.technologies.join(\n              \", \"\n            )}</span></h3>\n            <p>${project.description}</p>\n            <a class=\"github-link\" href=\"${\n              project.github\n            }\" target=\"_blank\">GitHub</a>\n          </div>\n    `;\n    projectsList.appendChild(projectDiv);\n  });\n};\n\nrenderProjects();\n\n\n//# sourceURL=webpack://mywebsite/./src/js/components/work.js?");
 
 /***/ }),
 
@@ -338,6 +348,28 @@ eval("module.exports = __webpack_require__.p + \"hero.png\";\n\n//# sourceURL=we
 
 /***/ }),
 
+/***/ "./src/assets/project_images/BeetEats.png":
+/*!************************************************!*\
+  !*** ./src/assets/project_images/BeetEats.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"BeetEats.png\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/project_images/BeetEats.png?");
+
+/***/ }),
+
+/***/ "./src/assets/project_images/BeetEatsDevice.png":
+/*!******************************************************!*\
+  !*** ./src/assets/project_images/BeetEatsDevice.png ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"BeetEatsDevice.png\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/project_images/BeetEatsDevice.png?");
+
+/***/ }),
+
 /***/ "./src/projects.json":
 /*!***************************!*\
   !*** ./src/projects.json ***!
@@ -345,7 +377,7 @@ eval("module.exports = __webpack_require__.p + \"hero.png\";\n\n//# sourceURL=we
 /***/ ((module) => {
 
 "use strict";
-eval("module.exports = /*#__PURE__*/JSON.parse('[{\"id\":\"beeteats\",\"title\":\"BeetEats\",\"madeWith\":[\"HTML\",\"CSS\",\"JavaScript\",\"Python\",\"Flask\",\"REST API\"],\"description\":\"A recipe finder & meal planner application.\",\"link\":\"https://mealplanner-luizsfhgza-uw.a.run.app/\",\"image\":\"../../assets/project_images/BeetEats.png\",\"label\":\"BeetEats project\",\"github\":\"https://github.com/FemputerTech/MealPlanner\"}]');\n\n//# sourceURL=webpack://mywebsite/./src/projects.json?");
+eval("module.exports = /*#__PURE__*/JSON.parse('[{\"id\":\"beeteats\",\"title\":\"BeetEats\",\"technologies\":[\"HTML\",\"CSS\",\"JavaScript\",\"Python\",\"Flask\",\"REST API\"],\"description\":\"A recipe finder & meal planner application.\",\"link\":\"https://mealplanner-luizsfhgza-uw.a.run.app/\",\"image\":\"BeetEats.png\",\"label\":\"BeetEats project\",\"github\":\"https://github.com/FemputerTech/MealPlanner\"}]');\n\n//# sourceURL=webpack://mywebsite/./src/projects.json?");
 
 /***/ })
 
