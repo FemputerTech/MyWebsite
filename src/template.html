@@ -291,12 +291,52 @@
       <!-- Contact Section -->
       <section id="contact" class="contact">
         <h1>Reach Out</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
-          officiis numquam rem dolorem repellat, animi voluptatum vel fuga
-          aliquam consectetur quasi nesciunt sapiente commodi nemo quis unde
-          adipisci temporibus consequatur!
-        </p>
+        <!-- using FORMSUBMIT -->
+        <form action="https://formsubmit.co/mleicht92@gmail.com" method="POST">
+          <label>Name*</label>
+          <div class="name">
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="First"
+              required
+            />
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Last"
+              required
+            />
+          </div>
+          <label>Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <label>Message</label>
+          <textarea
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+          ></textarea>
+          <!-- <input
+            type="hidden"
+            name="_next"
+            value="https://wwww.femputertech.com/thanks.html"
+          /> -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="New submission from FemputerTech!"
+          />
+          <button class="contact-submit-button" type="submit">Send</button>
+        </form>
       </section>
     </main>
     <div class="border" id="bottom-border"></div>
