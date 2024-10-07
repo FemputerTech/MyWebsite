@@ -96,42 +96,6 @@ p {
   padding: 10px 0;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-form input {
-  padding: 10px 20px;
-  margin-bottom: 20px;
-}
-
-form textarea {
-  padding: 10px 20px;
-  height: 100px;
-}
-
-form .name {
-  display: flex;
-  gap: 10px;
-}
-
-form .name input {
-  flex: 1;
-}
-
-.contact-submit-button {
-  align-self: center;
-  padding: 10px;
-  margin-top: 20px;
-  width: 100px;
-}
-
-.contact-submit-button:hover {
-  cursor: pointer;
-}
-
 @media (min-width: 768px) {
   body {
     display: grid;
