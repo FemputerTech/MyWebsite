@@ -3,6 +3,7 @@ import "./styles/components/about.css";
 import "./styles/components/contact.css";
 import "./styles/components/goo.css";
 import "./styles/components/hero.css";
+import "./styles/components/skills.css";
 import "./styles/components/work.css";
 
 import "./js/components/navbar.js";

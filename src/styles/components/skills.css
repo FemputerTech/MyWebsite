@@ -1,0 +1,34 @@
+/* ****************** Skills ****************** */
+.skills h2 {
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.skills-item {
+  display: flex;
+  background-color: var(--goo);
+  color: var(--primary-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  list-style-type: none;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+
+.skills-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.skills-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
