@@ -1,21 +1,4 @@
 /* ****************** Work ****************** */
-/* .work {
-  display: flex;
-  flex-direction: column;
-}
-
-.card {
-  background-color: var(--primary-color-muted);
-  padding: 20px;
-  margin: 50px;
-}
-
-.card-image {
-  background-color: black;
-  height: 500px;
-  width: 100%;
-} */
-
 .project {
   display: flex;
   gap: 40px;
