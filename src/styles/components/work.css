@@ -15,14 +15,3 @@
   height: 500px;
   width: 100%;
 } */
-
-.work {
-  padding: 0 40px;
-}
-
-.work h1 {
-  font-family: var(--font-heading);
-  font-size: 64px;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
