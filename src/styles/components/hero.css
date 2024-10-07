@@ -20,12 +20,6 @@
   padding: 0 20px;
 }
 
-.hero-text p {
-  font-size: 18px;
-  line-height: 32px;
-  padding: 10px 0;
-}
-
 .hero-button {
   color: var(--text-faint);
   background-color: var(--primary-color);
@@ -152,12 +146,6 @@
     text-align: left;
     padding: 0 40px;
     width: 60%;
-  }
-
-  .hero-text p {
-    font-size: 20px;
-    line-height: 36px;
-    padding: 20px 0;
   }
 
   .hero-button {
