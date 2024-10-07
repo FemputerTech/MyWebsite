@@ -1,0 +1,19 @@
+[
+  {
+    "id": "beeteats",
+    "title": "BeetEats",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "REST API"
+    ],
+    "description": "A recipe finder & meal planner application.",
+    "link": "https://mealplanner-luizsfhgza-uw.a.run.app/",
+    "image": "BeetEats.png",
+    "label": "BeetEats project",
+    "github": "https://github.com/FemputerTech/MealPlanner"
+  }
+]
