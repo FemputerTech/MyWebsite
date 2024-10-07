@@ -11,14 +11,9 @@ const renderProjects = () => {
     projectDiv.className = "project";
     projectDiv.innerHTML = `
           <div class="project-image">
-            <a
-              href="${project.link}"
-              target="_blank"
-            >
-              <img src="${imagePath}" id="${project.id}" aria-label="${
+            <img src="${imagePath}" id="${project.id}" aria-label="${
       project.label
     }" />
-            </a>
           </div>
           <div class="project-content">
             <h2 class="project-title">${project.title}</h2>

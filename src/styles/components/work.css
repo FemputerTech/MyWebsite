@@ -1,8 +1,18 @@
 /* ****************** Work ****************** */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
 .project {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-top: 40px;
+  gap: 40px;
+  width: 100%;
 }
 
 .project-image {
@@ -10,18 +20,11 @@
   width: 50%;
 }
 
-.project-image a {
-  display: inline-block; /* Make the anchor behave like a block around the image */
-  text-decoration: none; /* Remove any underlining or styling on the anchor */
-}
-
 .project-image img {
-  display: block;
   border-radius: 10px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   object-fit: contain;
   width: 100%;
-  height: 100%;
   transition: transform 0.3s ease;
 }
 

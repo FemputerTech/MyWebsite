@@ -1,3 +1,4 @@
+// border.js
 const borders = document.querySelectorAll(".border");
 
 borders.forEach((border) => {

@@ -155,8 +155,8 @@ form .name input {
   main {
     grid-column: 2;
     grid-row: 3;
-    margin-right: 120px;
-    margin-left: 20px;
+    margin-right: 200px;
+    margin-left: 100px;
   }
 
   #bottom-border {
@@ -171,7 +171,7 @@ form .name input {
 
   section {
     padding: 0 40px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 
   h1 {
