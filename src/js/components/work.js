@@ -28,7 +28,7 @@ const renderProjects = () => {
             <p>${project.description}</p>
             <a class="github-link" href="${
               project.github
-            }" target="_blank">GitHub</a>
+            }" target="_blank">Link to GitHub repository</a>
           </div>
     `;
     projectsList.appendChild(projectDiv);

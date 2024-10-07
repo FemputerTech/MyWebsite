@@ -10,7 +10,7 @@
       "Flask",
       "REST API"
     ],
-    "description": "A recipe finder & meal planner application.",
+    "description": "A recipe finder & meal planning application that integrates the EDAMAM API.",
     "link": "https://mealplanner-luizsfhgza-uw.a.run.app/",
     "image": "BeetEats.png",
     "label": "BeetEats project",
