@@ -8,9 +8,16 @@ form {
 
 form input,
 form textarea {
+  border: 1px solid #e4e4e4;
+  font-family: var(--font-family);
   padding: 10px 20px;
   margin-bottom: 20px;
   width: 100%;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #adaeb0;
 }
 
 form .name {
@@ -24,7 +31,14 @@ form .name input {
 
 .contact-submit-button {
   align-self: center;
-  padding: 10px;
+  color: var(--text-faint);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
   margin-top: 20px;
   width: 100px;
 }
