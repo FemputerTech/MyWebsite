@@ -72,9 +72,8 @@ p {
 .primary-button {
   color: var(--text-faint);
   background-color: var(--primary-color);
-  border: none;
+  border: 1.5px solid black;
   border-radius: 4px;
-  border: 2px solid black;
   box-shadow: 4px 4px 1px rgba(0, 0, 0, 1);
   font-size: 1.1em;
   font-weight: 500;
