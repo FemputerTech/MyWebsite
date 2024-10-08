@@ -23,7 +23,6 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/contact.css ***!
   \*************************************************************************************/
 /* ****************** Contact ****************** */
-
 form {
   display: flex;
   flex-direction: column;
@@ -55,20 +54,6 @@ form .name input {
 
 .contact-submit-button {
   align-self: center;
-  color: var(--text-faint);
-  background-color: var(--primary-color);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 20px;
-  margin-top: 20px;
-  width: 100px;
-}
-
-.contact-submit-button:hover {
-  cursor: pointer;
 }
 
 /*!*********************************************************************************!*\
@@ -138,7 +123,7 @@ form .name input {
   background-color: var(--goo);
   color: var(--primary-color);
   border-radius: 10px;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 400;
   list-style-type: none;
   transition: transform 0.3s ease;
@@ -177,25 +162,6 @@ form .name input {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
-}
-
-.hero-button {
-  color: var(--text-faint);
-  background-color: var(--primary-color);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  font-weight: 500;
-  transition: transform 0.3s ease;
-  padding: 10px 20px;
-  margin-top: 10px;
-}
-
-.hero-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 .hero-image {
@@ -302,24 +268,18 @@ form .name input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
   }
 
   .hero-text {
     align-items: flex-start;
     text-align: left;
-    padding: 0 40px;
     width: 60%;
-  }
-
-  .hero-button {
-    font-size: 20px;
   }
 
   .hero-image img {
     width: 100%;
     max-width: 500px;
-    /* background-color: beige; */
   }
 }
 
@@ -358,7 +318,6 @@ form .name input {
 
 .logo-text {
   font-family: var(--font-logo);
-  font-size: 18px;
   font-weight: 100;
 }
 
@@ -428,15 +387,12 @@ nav {
     align-self: stretch;
   }
 
-  .logo-text {
-    font-size: 22px;
-  }
-
   nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-self: stretch;
+    height: auto;
+    align-self: center;
   }
 
   .navbar-toggle {
@@ -565,6 +521,9 @@ html {
   --font-family: "Poppins", sans-serif;
   --font-heading: "Abril Fatface", serif;
   --font-logo: "Abril Fatface", serif;
+
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .spooky {
@@ -579,10 +538,49 @@ body {
   background-color: var(--body-color);
   color: var(--text-normal);
   font-family: var(--font-family);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   overflow-x: hidden;
   height: 100%;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1em;
+  padding: 10px 0;
+}
+
+.primary-button {
+  color: var(--text-faint);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 header {
@@ -590,7 +588,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--goo);
-  padding: 30px;
+  padding: 10px 20px;
 }
 
 .border {
@@ -604,8 +602,8 @@ header {
 
 main {
   min-height: calc(100vh - 170px);
-  margin-right: 20px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 #bottom-border {
@@ -620,33 +618,22 @@ footer {
   padding: 30px;
 }
 
-section {
-  padding: 0 20px;
-  margin-bottom: 100px;
-}
-
-h1 {
-  font-family: var(--font-heading);
-  font-size: 48px;
-  font-weight: 400;
-}
-
-p {
-  font-size: 18px;
-  line-height: 32px;
-  padding: 10px 0;
-}
-
 @media (min-width: 768px) {
+  :root {
+    font-size: 18px;
+  }
+
   body {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 60px 1fr;
     grid-template-rows: 100px 60px 1fr 60px 100px;
   }
 
   header {
     grid-column: 1 / 5;
     grid-row: 1;
+    align-items: center;
+    padding: 10px 60px;
   }
 
   #top-border {
@@ -665,8 +652,8 @@ p {
   main {
     grid-column: 2;
     grid-row: 3;
-    margin-right: 200px;
-    margin-left: 100px;
+    margin-left: 40px;
+    margin-right: 100px;
   }
 
   #bottom-border {
@@ -679,33 +666,16 @@ p {
     grid-row: 5;
   }
 
-  section {
-    padding: 0 40px;
-  }
-
-  h1 {
-    font-size: 64px;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 20px;
-    line-height: 36px;
-    margin-bottom: 24px;
-  }
-
   .social-links {
     position: sticky;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
     bottom: 20px;
     gap: 10px;
   }
 
   .social-links a {
-    margin: 10px 0;
     color: var(--text-normal);
     text-decoration: none;
     transition: transform 0.3s ease;

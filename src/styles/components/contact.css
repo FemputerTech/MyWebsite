@@ -1,5 +1,4 @@
 /* ****************** Contact ****************** */
-
 form {
   display: flex;
   flex-direction: column;
@@ -31,18 +30,4 @@ form .name input {
 
 .contact-submit-button {
   align-self: center;
-  color: var(--text-faint);
-  background-color: var(--primary-color);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 20px;
-  margin-top: 20px;
-  width: 100px;
-}
-
-.contact-submit-button:hover {
-  cursor: pointer;
 }

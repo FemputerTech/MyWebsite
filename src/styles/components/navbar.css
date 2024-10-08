@@ -30,7 +30,6 @@
 
 .logo-text {
   font-family: var(--font-logo);
-  font-size: 18px;
   font-weight: 100;
 }
 
@@ -100,15 +99,12 @@ nav {
     align-self: stretch;
   }
 
-  .logo-text {
-    font-size: 22px;
-  }
-
   nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-self: stretch;
+    height: auto;
+    align-self: center;
   }
 
   .navbar-toggle {

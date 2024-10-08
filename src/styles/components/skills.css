@@ -16,7 +16,7 @@
   background-color: var(--goo);
   color: var(--primary-color);
   border-radius: 10px;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 400;
   list-style-type: none;
   transition: transform 0.3s ease;

@@ -17,25 +17,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
-}
-
-.hero-button {
-  color: var(--text-faint);
-  background-color: var(--primary-color);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  font-weight: 500;
-  transition: transform 0.3s ease;
-  padding: 10px 20px;
-  margin-top: 10px;
-}
-
-.hero-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 .hero-image {
@@ -142,23 +123,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
   }
 
   .hero-text {
     align-items: flex-start;
     text-align: left;
-    padding: 0 40px;
     width: 60%;
-  }
-
-  .hero-button {
-    font-size: 20px;
   }
 
   .hero-image img {
     width: 100%;
     max-width: 500px;
-    /* background-color: beige; */
   }
 }
