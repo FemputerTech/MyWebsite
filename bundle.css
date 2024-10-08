@@ -32,9 +32,16 @@ form {
 
 form input,
 form textarea {
+  border: 1px solid #e4e4e4;
+  font-family: var(--font-family);
   padding: 10px 20px;
   margin-bottom: 20px;
   width: 100%;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #adaeb0;
 }
 
 form .name {
@@ -48,7 +55,14 @@ form .name input {
 
 .contact-submit-button {
   align-self: center;
-  padding: 10px;
+  color: var(--text-faint);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
   margin-top: 20px;
   width: 100px;
 }
@@ -101,6 +115,44 @@ form .name input {
   transform: scale(-1, -1);
   height: 60px;
   bottom: 80px;
+}
+
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/skills.css ***!
+  \************************************************************************************/
+/* ****************** Skills ****************** */
+.skills h2 {
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.skills-item {
+  display: flex;
+  background-color: var(--goo);
+  color: var(--primary-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  list-style-type: none;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+
+.skills-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.skills-link {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 /*!**********************************************************************************!*\
@@ -269,44 +321,6 @@ form .name input {
     max-width: 500px;
     /* background-color: beige; */
   }
-}
-
-/*!************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/skills.css ***!
-  \************************************************************************************/
-/* ****************** Skills ****************** */
-.skills h2 {
-  margin-bottom: 10px;
-}
-
-.skills-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.skills-item {
-  display: flex;
-  background-color: var(--goo);
-  color: var(--primary-color);
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 400;
-  list-style-type: none;
-  transition: transform 0.3s ease;
-  padding: 10px;
-}
-
-.skills-item:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.skills-link {
-  color: var(--primary-color);
-  text-decoration: none;
 }
 
 /*!************************************************************************************!*\
