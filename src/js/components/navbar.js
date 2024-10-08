@@ -1,6 +1,6 @@
 // navbar.js
 import "../../styles/components/navbar.css";
-import resumePDF from "../../assets/Meghan_Leicht_Resume_Web_Developer.pdf";
+import resumePDF from "../../assets/Resume_Meghan_Leicht_Web.pdf";
 
 const resume = document.getElementById("resume");
 resume.href = resumePDF;

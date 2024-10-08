@@ -112,6 +112,10 @@ main {
   margin-right: 20px;
 }
 
+section {
+  margin-bottom: 100px;
+}
+
 #bottom-border {
   transform: scale(-1, -1);
 }
@@ -177,8 +181,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 20px;
-    gap: 10px;
+    bottom: 40px;
+    gap: 20px;
   }
 
   .social-links a {
