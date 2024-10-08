@@ -135,7 +135,7 @@ eval("// border.js\nconst borders = document.querySelectorAll(\".border\");\n\nb
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_hero_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/hero.png */ \"./src/assets/hero.png\");\n/* harmony import */ var _assets_Meghan_Leicht_Resume_Web_Developer_pdf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/Meghan_Leicht_Resume_Web_Developer.pdf */ \"./src/assets/Meghan_Leicht_Resume_Web_Developer.pdf\");\n/* harmony import */ var _styles_components_hero_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/components/hero.css */ \"./src/styles/components/hero.css\");\n// hero.js\n\n\n\n\nconst heroImageMeghan = document.getElementById(\"hero-image-meghan\");\nheroImageMeghan.src = _assets_hero_png__WEBPACK_IMPORTED_MODULE_0__;\n\nconst heroButton = document.getElementById(\"hero-button\");\nheroButton.addEventListener(\"click\", () => {\n  window.open(_assets_Meghan_Leicht_Resume_Web_Developer_pdf__WEBPACK_IMPORTED_MODULE_1__, \"_blank\"); // Opens the PDF in a new tab\n});\n\n\n//# sourceURL=webpack://mywebsite/./src/js/components/hero.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_hero_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/hero.png */ \"./src/assets/hero.png\");\n/* harmony import */ var _assets_Resume_Meghan_Leicht_Web_pdf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/Resume_Meghan_Leicht_Web.pdf */ \"./src/assets/Resume_Meghan_Leicht_Web.pdf\");\n/* harmony import */ var _styles_components_hero_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/components/hero.css */ \"./src/styles/components/hero.css\");\n// hero.js\n\n\n\n\nconst heroImageMeghan = document.getElementById(\"hero-image-meghan\");\nheroImageMeghan.src = _assets_hero_png__WEBPACK_IMPORTED_MODULE_0__;\n\nconst heroButton = document.getElementById(\"hero-button\");\nheroButton.addEventListener(\"click\", () => {\n  window.open(_assets_Resume_Meghan_Leicht_Web_pdf__WEBPACK_IMPORTED_MODULE_1__, \"_blank\"); // Opens the PDF in a new tab\n});\n\n\n//# sourceURL=webpack://mywebsite/./src/js/components/hero.js?");
 
 /***/ }),
 
@@ -146,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_components_navbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/components/navbar.css */ \"./src/styles/components/navbar.css\");\n/* harmony import */ var _assets_Meghan_Leicht_Resume_Web_Developer_pdf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/Meghan_Leicht_Resume_Web_Developer.pdf */ \"./src/assets/Meghan_Leicht_Resume_Web_Developer.pdf\");\n// navbar.js\n\n\n\nconst resume = document.getElementById(\"resume\");\nresume.href = _assets_Meghan_Leicht_Resume_Web_Developer_pdf__WEBPACK_IMPORTED_MODULE_1__;\n\nfunction toggleNavList() {\n  const navList = document.querySelector(\".nav-list\");\n\n  if (navList.style.display === \"\") {\n    navList.style.display = \"flex\";\n  } else {\n    navList.style.display = \"\";\n  }\n}\n\nconst navbarToggle = document.querySelector(\".navbar-toggle\");\nnavbarToggle.addEventListener(\"click\", toggleNavList);\n\nconst animatedGhostOverlay = document.querySelector(\".animated-ghost-overlay\");\nanimatedGhostOverlay.addEventListener(\"animationend\", function () {\n  this.style.display = \"none\"; // Hide after animation ends, otherwise navbar will be completely covered\n});\n\n\n//# sourceURL=webpack://mywebsite/./src/js/components/navbar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_components_navbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/components/navbar.css */ \"./src/styles/components/navbar.css\");\n// navbar.js\n\n\nfunction toggleNavList() {\n  const navList = document.querySelector(\".nav-list\");\n\n  if (navList.style.display === \"\") {\n    navList.style.display = \"flex\";\n  } else {\n    navList.style.display = \"\";\n  }\n}\n\nconst navbarToggle = document.querySelector(\".navbar-toggle\");\nnavbarToggle.addEventListener(\"click\", toggleNavList);\n\nconst animatedGhostOverlay = document.querySelector(\".animated-ghost-overlay\");\nanimatedGhostOverlay.addEventListener(\"animationend\", function () {\n  this.style.display = \"none\"; // Hide after animation ends, otherwise navbar will be completely covered\n});\n\nconst navLinks = document.querySelectorAll(\".nav-link\");\n\nfunction resetStyles(link) {\n  link.style.boxShadow = \"4px 4px 1px rgba(0, 0, 0, 1)\";\n  link.style.transform = \"translate(0, 0)\";\n}\n\nnavLinks.forEach((link) => {\n  link.addEventListener(\"mousedown\", () => {\n    link.style.boxShadow = \"none\";\n    link.style.transform = \"translate(2px, 2px)\";\n  });\n  link.addEventListener(\"mouseup\", () => resetStyles(link));\n  link.addEventListener(\"mouseleave\", () => resetStyles(link));\n});\n\n// Navbar Hide\nconst header = document.querySelector(\"header\");\nconst topBorder = document.getElementById(\"top-border\");\n\nconst showNavbar = () => {\n  header.style.opacity = 1;\n  topBorder.style.opacity = 1;\n};\n\nconst hideNavbar = () => {\n  header.style.opacity = 0;\n  topBorder.style.opacity = 0;\n};\n\nwindow.addEventListener(\"scroll\", () => {\n  if (window.scrollY >= 160) {\n    header.style.position = \"fixed\";\n    topBorder.style.position = \"fixed\";\n    hideNavbar();\n\n    header.addEventListener(\"mouseenter\", showNavbar);\n    header.addEventListener(\"mouseleave\", hideNavbar);\n  } else {\n    header.style.position = \"relative\";\n    topBorder.style.position = \"relative\";\n    showNavbar();\n\n    header.removeEventListener(\"mouseenter\", showNavbar);\n    header.removeEventListener(\"mouseleave\", hideNavbar);\n  }\n});\n\n\n//# sourceURL=webpack://mywebsite/./src/js/components/navbar.js?");
 
 /***/ }),
 
@@ -161,14 +161,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pro
 
 /***/ }),
 
-/***/ "./src/assets/Meghan_Leicht_Resume_Web_Developer.pdf":
-/*!***********************************************************!*\
-  !*** ./src/assets/Meghan_Leicht_Resume_Web_Developer.pdf ***!
-  \***********************************************************/
+/***/ "./src/assets/Resume_Meghan_Leicht_Web.pdf":
+/*!*************************************************!*\
+  !*** ./src/assets/Resume_Meghan_Leicht_Web.pdf ***!
+  \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"Meghan_Leicht_Resume_Web_Developer.pdf\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/Meghan_Leicht_Resume_Web_Developer.pdf?");
+eval("module.exports = __webpack_require__.p + \"Resume_Meghan_Leicht_Web.pdf\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/Resume_Meghan_Leicht_Web.pdf?");
 
 /***/ }),
 

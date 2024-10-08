@@ -39,8 +39,6 @@ navLinks.forEach((link) => {
 const header = document.querySelector("header");
 const topBorder = document.getElementById("top-border");
 
-let isScrolling = false;
-
 const showNavbar = () => {
   header.style.opacity = 1;
   topBorder.style.opacity = 1;

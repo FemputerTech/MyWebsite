@@ -64,6 +64,23 @@ nav {
   letter-spacing: 2px;
 }
 
+.balls {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
+}
+
 .dark-mode-toggle {
   display: none;
 }

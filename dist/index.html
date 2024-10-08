@@ -11,6 +11,7 @@
     />
   <script defer src="bundle.js"></script><link href="bundle.css" rel="stylesheet"></head>
   <body>
+    <div class="balls"></div>
     <header>
       <div class="animated-ghost-overlay">
         <i
@@ -34,6 +35,9 @@
         </div>
         <ul class="nav-list">
           <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
@@ -41,15 +45,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              id="resume"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Resume</a
-            >
           </li>
         </ul>
         <!-- <button
@@ -66,11 +61,8 @@
     </header>
     <div class="border" id="top-border"></div>
     <!-- Sidebar -->
-    <section class="sidebar">
+    <div class="sidebar">
       <div class="social-links">
-        <a href="#" aria-label="Go back to the top">
-          <i class="fa-solid fa-chevron-up fa-lg"></i>
-        </a>
         <a
           href="https://github.com/FemputerTech"
           target="_blank"
@@ -89,28 +81,31 @@
           <i class="fa-regular fa-envelope fa-xl"></i>
         </a>
       </div>
-    </section>
+    </div>
     <main>
       <!-- Hero Section -->
       <section id="hero" class="hero">
         <div class="hero-content">
           <div class="hero-text">
-            <h1 class="line">Hi there!</h1>
+            <h1 class="line">
+              Hi, I'm <span style="color: var(--primary-color)">Meghan</span>!
+            </h1>
             <p class="line">
-              I'm Meghan Leicht, a web developer passionate about creating
-              engaging and user-friendly digital experiences. I approach every
-              project with curiosity and a willingness to learn, eager to
-              collaborate with others and grow alongside talented professionals.
-              I believe that the best designs come from teamwork and open
-              communication, and I’m dedicated to continually improving my
-              skills to create work that not only solves problems but elevates
-              the user experience.
+              A web developer dedicated to crafting engaging, user-friendly
+              digital experiences. I value collaboration and believe the best
+              designs come from teamwork and open communication. I'm committed
+              to improving my skills to solve problems and enhance user
+              experiences.
             </p>
             <p class="line">
-              Let’s work together to build something inspiring and make a
+              Let's work together to build something inspiring and make a
               meaningful impact!
             </p>
-            <button class="primary-button line" rel="noopener noreferrer">
+            <button
+              id="hero-button"
+              class="primary-button"
+              rel="noopener noreferrer"
+            >
               Get my resume
             </button>
           </div>
@@ -129,13 +124,35 @@
       <!-- About Section -->
       <section id="about" class="about">
         <h1>About Me</h1>
+        <h2>My Past</h2>
         <p>
-          I'm Meghan, a passionate junior Front-End Developer with a background
-          in data analytics. I recently graduated with a Bachelor of Science in
-          Computer Science and have a strong interest in UI/UX design. I'm
-          dedicated to creating visually stunning, user-friendly, and accessible
-          websites. Explore my work to see how I combine precision and
-          creativity to build engaging and effective digital experiences.
+          I began my professional career at Moda Health as a Group Underwriter,
+          then Data Analyst. During my time there, I was eager to explore ways
+          to enhance our outdated Excel tools. I learned VBA to create
+          user-friendly interfaces, which sparked a passion for merging
+          creativity and design with technical skills. Speaking with a
+          colleague, I was introduced to Front-End development. These
+          conversations solidified my direction for my undergraduate major and
+          helped me clarify my career aspirations.
+        </p>
+        <h2>My Present</h2>
+        <p>
+          I recently graduated with my BS in Computer Science, where I
+          discovered my passion for web development and design. I'm dedicated to
+          enhancing my understanding of web technologies and actively working on
+          personal projects on GitHub. I take meticulous time on each of my
+          projects, striving to expand my learnings to improve my current work.
+          I love bringing ideas to life and am eager to learn from others in the
+          field. My goal is to evolve into a career as a web developer and
+          designer, focusing on creating intuitive user interfaces, implementing
+          smooth transitions, and optimizing performance.
+        </p>
+        <h2>My Future</h2>
+        <p>
+          I see myself mastering web development and gaining a strong
+          understanding of UX/UI. I envision being at a company long-term,
+          evolving with new technologies, and embracing new challenges. Each
+          day, I want to wake up excited about what I do.
         </p>
       </section>
       <!-- Skills Section -->
