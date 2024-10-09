@@ -61,9 +61,9 @@ function mouseUp() {
     const CardTexts = document.querySelectorAll(".about-text");
     CardTexts.forEach((cardText) => {
       if (cardText.classList.contains(middleCard.id)) {
-        cardText.classList.add("visible");
+        cardText.classList.add("active");
       } else {
-        cardText.classList.remove("visible");
+        cardText.classList.remove("active");
       }
     });
 

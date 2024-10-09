@@ -23,11 +23,15 @@
 
 .about-text {
   display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
   flex: 1;
 }
 
-.about-text.visible {
+.about-text.active {
   display: block;
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
 
 .card {
