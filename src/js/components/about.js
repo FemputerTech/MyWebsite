@@ -1,5 +1,5 @@
 // about.js
-import "../../styles/components/about.css";
+// import "../../styles/components/about.css";
 
 let topCard = document.querySelector(".card.top");
 let middleCard = document.querySelector(".card.middle");

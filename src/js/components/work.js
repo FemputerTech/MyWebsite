@@ -1,6 +1,6 @@
 // work.js
 import projects from "../../projects.json";
-import "../../styles/components/work.css";
+// import "../../styles/components/work.css";
 
 const renderProjects = () => {
   const projectsList = document.querySelector(".projects-list");

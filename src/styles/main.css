@@ -4,8 +4,8 @@
 @font-face {
   font-family: "HerosAssembleFont";
   src: url("../assets/fonts/HeroesAssembleRegular-Kmvl.otf") format("opentype");
-  font-weight: normal; /* or bold */
-  font-style: normal; /* or italic */
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {

@@ -1,7 +1,7 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -24,6 +24,26 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
   },
+
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+    new HtmlWebpackPlugin({
+      title: "FemputerTech",
+      filename: "index.html",
+      template: "./src/template.html",
+      inject: "body",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "CNAME"),
+          to: path.resolve(__dirname, "dist"),
+        },
+      ],
+    }),
+  ],
   module: {
     rules: [
       {
@@ -36,22 +56,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "FemputerTech",
-      filename: "index.html",
-      template: "./src/template.html",
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "CNAME"),
-          to: path.resolve(__dirname, "dist"),
-        },
-      ],
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-    }),
-  ],
 };

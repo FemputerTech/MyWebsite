@@ -1,5 +1,5 @@
 // navbar.js
-import "../../styles/components/navbar.css";
+// import "../../styles/components/navbar.css";
 
 function toggleNavList() {
   const navList = document.querySelector(".nav-list");

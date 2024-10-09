@@ -9,7 +9,8 @@
       href="{{ url_for('static', filename='favicon.ico') }}"
       type="image/x-icon"
     />
-  <script defer src="bundle.js"></script><link href="bundle.css" rel="stylesheet"></head>
+    <link href="bundle.css" rel="stylesheet" />
+  </head>
   <body>
     <header>
       <div class="animated-ghost-overlay">
@@ -373,7 +374,7 @@
             name="_subject"
             value="New submission from FemputerTech!"
           />
-          <button class="primary-button" id="hero-button" type="submit">
+          <button class="primary-button" id="submit-button" type="submit">
             Send
           </button>
         </form>
@@ -402,5 +403,6 @@
       src="https://kit.fontawesome.com/2872694500.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="bundle.js"></script>
   </body>
 </html>
