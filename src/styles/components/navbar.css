@@ -69,6 +69,15 @@ nav {
   display: none;
 }
 
+.ball {
+  display: none;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(20px);

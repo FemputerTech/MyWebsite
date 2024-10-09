@@ -74,15 +74,6 @@ p {
   padding: 10px 0;
 }
 
-.ball {
-  display: none;
-  position: absolute;
-  background-color: red;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1000;
-}
-
 header {
   display: flex;
   justify-content: space-between;
