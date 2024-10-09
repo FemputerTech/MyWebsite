@@ -42,6 +42,7 @@ nav {
 
 .navbar-toggle {
   display: inline;
+  cursor: pointer;
   text-align: right;
 }
 
