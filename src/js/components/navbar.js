@@ -70,7 +70,7 @@ navLinks.forEach((link) => {
     if (window.location.href === link.href) {
       console.log("splatter!");
       for (let i = 0; i < 3; i++) {
-        createSplatter(link);
+        createSplatter(link, event);
       }
     }
   });
@@ -83,10 +83,12 @@ function resetStyles(link) {
 }
 
 // ~~~~~~~~~~~~~~~~~~~ click ~~~~~~~~~~~~~~~~~~~ //
-function createSplatter(link) {
-  const linkRect = link.getBoundingClientRect();
-  const centerX = linkRect.left + linkRect.width / 2;
-  const centerY = linkRect.top + linkRect.height / 2;
+function createSplatter(link, event) {
+  //   const linkRect = link.getBoundingClientRect();
+  //   const centerX = linkRect.left + linkRect.width / 2;
+  //   const centerY = linkRect.top + linkRect.height / 2;
+  const xClick = event.clientX;
+  const yClick = event.clientY;
   const header = document.querySelector("header");
   const splatter = document.createElement("div");
   splatter.className = "splatter";
@@ -95,8 +97,8 @@ function createSplatter(link) {
   splatter.style.width = `${randomSize}px`;
   splatter.style.height = `${randomSize}px`;
   splatter.style.display = "block";
-  splatter.style.left = `${centerX}px`;
-  splatter.style.top = `${centerY}px`;
+  splatter.style.left = `${xClick}px`;
+  splatter.style.top = `${yClick}px`;
   header.appendChild(splatter);
   const x = Math.random() < 0.5 ? -1 : 1;
   const randomOffset = Math.random() * 5;
