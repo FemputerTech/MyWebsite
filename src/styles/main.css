@@ -111,7 +111,7 @@ header {
 }
 
 main {
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 160px);
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -132,7 +132,7 @@ footer {
   padding: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 852px) {
   :root {
     font-size: 18px;
   }
