@@ -6,19 +6,6 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (1) ***!
   \***************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
-/*!***************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (2) ***!
-  \***************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Creepster&display=swap);
-/*!***************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (3) ***!
-  \***************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Nosifer&display=swap);
-/*!***********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/about.css ***!
-  \***********************************************************************************/
-/* ****************** About ****************** */
-
 /*!*************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/contact.css ***!
   \*************************************************************************************/
@@ -138,6 +125,49 @@ form .name input {
 .skills-link {
   color: var(--primary-color);
   text-decoration: none;
+}
+
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/about.css ***!
+  \***********************************************************************************/
+/* ****************** About ****************** */
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 600px;
+}
+
+.card {
+  position: absolute;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 1);
+  cursor: grab;
+  font-size: 0.8em;
+  padding: 20px;
+  width: 380px;
+  height: 500px;
+  user-select: none;
+}
+
+.card.top {
+  transform: rotate(-4deg);
+  z-index: 20;
+}
+
+.card.middle {
+  transform: translate(80px, -10px) scale(0.9) rotate(4deg);
+  z-index: 19;
+}
+
+.card.bottom {
+  transform: translate(140px, -10px) scale(0.8) rotate(-2deg);
+  z-index: 18;
 }
 
 /*!**********************************************************************************!*\
@@ -262,7 +292,7 @@ form .name input {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 852px) {
   .hero {
     height: calc(100vh - 170px);
   }
@@ -404,7 +434,7 @@ nav {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 852px) {
   .logo-container {
     align-self: center;
   }
@@ -494,7 +524,7 @@ nav {
   transition: transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 852px) {
   .project {
     flex-direction: row;
     justify-content: space-between;
@@ -523,8 +553,15 @@ nav {
 }
 
 /*!***************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (4) ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (2) ***!
   \***************************************************************************/
+@font-face {
+  font-family: "HerosAssembleFont";
+  src: url(HeroesAssembleRegular-Kmvl.otf) format("opentype");
+  font-weight: normal; /* or bold */
+  font-style: normal; /* or italic */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -545,7 +582,7 @@ html {
 
   --font-family: "Poppins", sans-serif;
   --font-heading: "Abril Fatface", serif;
-  --font-logo: "Abril Fatface", serif;
+  --font-logo: "HerosAssembleFont";
 
   font-size: 16px;
   line-height: 1.8;
@@ -628,7 +665,7 @@ header {
 }
 
 main {
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 160px);
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -649,7 +686,7 @@ footer {
   padding: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 852px) {
   :root {
     font-size: 18px;
   }
