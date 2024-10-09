@@ -65,12 +65,18 @@ function mouseUp() {
     bottomCard.style.transform =
       "translate(70px, -10px) scale(0.9) rotate(4deg)";
 
+    const aboutText = document.querySelector(".about-text");
+    aboutText.style.opacity = 1;
+    aboutText.style.transition = "opacity 2s ease";
+
     const CardTexts = document.querySelectorAll(".about-text");
     CardTexts.forEach((cardText) => {
       if (cardText.classList.contains(middleCard.id)) {
         cardText.classList.add("active");
+        cardText.style.opacity = 1;
       } else {
         cardText.classList.remove("active");
+        cardText.style.opacity = 0;
       }
     });
 
