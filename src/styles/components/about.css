@@ -25,12 +25,15 @@
 
 .card.top {
   transform: rotate(-4deg);
+  z-index: 20;
 }
 
 .card.middle {
   transform: translate(80px, -10px) scale(0.9) rotate(4deg);
+  z-index: 19;
 }
 
 .card.bottom {
   transform: translate(140px, -10px) scale(0.8) rotate(-2deg);
+  z-index: 18;
 }
