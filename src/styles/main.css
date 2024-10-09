@@ -20,11 +20,13 @@ html {
 
 :root {
   --primary-color: #8133ff;
+  --header-color: #c2bdb7;
+  --goo: #33ff48;
+
   --primary-color-muted: #c49fff;
   --text-normal: #252322;
   --text-faint: #f0eae2;
   --body-color: #f0eae2;
-  --goo: #c2bdb7;
 
   --font-family: "Poppins", sans-serif;
   --font-heading: "Abril Fatface", serif;
@@ -78,7 +80,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--goo);
+  background-color: var(--header-color);
   padding: 10px 20px;
 }
 
@@ -109,7 +111,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--goo);
+  background-color: var(--header-color);
   padding: 30px;
 }
 

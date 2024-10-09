@@ -13,7 +13,7 @@
 
 .skills-item {
   display: flex;
-  background-color: var(--goo);
+  background-color: var(--header-color);
   color: var(--primary-color);
   border-radius: 10px;
   /* font-size: 20px; */
