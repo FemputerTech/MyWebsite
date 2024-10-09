@@ -69,7 +69,7 @@ nav {
   display: none;
 }
 
-.ball {
+.splatter {
   display: none;
   position: absolute;
   background-color: var(--goo);
