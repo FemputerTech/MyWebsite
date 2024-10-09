@@ -1,7 +1,14 @@
 /* ****************** About ****************** */
 .about {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.about-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  margin-top: 40px;
+  gap: 60px;
 }
 
 .cards {
@@ -9,7 +16,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(380px + 180px);
+  padding: 40px;
+  width: 600px;
+  min-height: calc(380px + 180px);
+}
+
+.about-text {
+  display: none;
+  flex: 1;
+}
+
+.about-text.visible {
+  display: block;
 }
 
 .card {
@@ -26,16 +44,19 @@
 }
 
 .card.top {
-  transform: translate(-70px, 0px) rotate(-4deg);
+  /* transform: translate(-70px, 0px) rotate(-4deg); */
+  transform: translate(0px, 0px) rotate(-4deg);
   z-index: 20;
 }
 
 .card.middle {
-  transform: translate(0px, -10px) scale(0.9) rotate(4deg);
+  /* transform: translate(0px, -10px) scale(0.9) rotate(4deg); */
+  transform: translate(70px, -10px) scale(0.9) rotate(4deg);
   z-index: 19;
 }
 
 .card.bottom {
-  transform: translate(60px, -10px) scale(0.8) rotate(-2deg);
+  /* transform: translate(60px, -10px) scale(0.8) rotate(-2deg); */
+  transform: translate(130px, -10px) scale(0.8) rotate(-2deg);
   z-index: 18;
 }

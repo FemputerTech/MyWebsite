@@ -48,7 +48,6 @@ function mouseUp() {
   topCard.style.transition = "transform 0.8s ease";
   translateX = 0;
 
-  console.log(Math.abs(dragDistance));
   if (Math.abs(dragDistance) > 160) {
     topCard.classList.remove("top");
     topCard.classList.add("bottom");
@@ -58,6 +57,15 @@ function mouseUp() {
     middleCard.classList.add("top");
     middleCard.style.transition = "transform 0.8s ease";
     middleCard.style.transform = "translate(-70px, 0px) rotate(-4deg)";
+
+    const CardTexts = document.querySelectorAll(".about-text");
+    CardTexts.forEach((cardText) => {
+      if (cardText.classList.contains(middleCard.id)) {
+        cardText.classList.add("visible");
+      } else {
+        cardText.classList.remove("visible");
+      }
+    });
 
     bottomCard.classList.remove("bottom");
     bottomCard.classList.add("middle");
