@@ -12,8 +12,18 @@
 @font-face {
   font-family: "HerosAssembleFont";
   src: url(HeroesAssembleRegular-Kmvl.otf) format("opentype");
-  font-weight: normal; /* or bold */
-  font-style: normal; /* or italic */
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -32,22 +42,11 @@
   line-height: 1.8;
 }
 
-/* .spooky {
+.spooky {
   --text-normal: #f0eae2;
   --text-faint: #1b1d1a;
   --body-color: #1b1d1a;
   --goo: #2e5031;
-} */
-
-* {
-  background-color: var(--body-color);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
