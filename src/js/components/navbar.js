@@ -47,11 +47,15 @@ window.addEventListener("scroll", () => {
 const showNavbar = () => {
   header.style.opacity = 1;
   topBorder.style.opacity = 1;
+  //   header.style.top = "0";
+  //   topBorder.style.top = "0";
 };
 
 const hideNavbar = () => {
   header.style.opacity = 0;
   topBorder.style.opacity = 0;
+  //   header.style.top = "-100px";
+  //   topBorder.style.top = "-100px";
 };
 
 // ================== NavLinks ================== //
