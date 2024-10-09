@@ -29,6 +29,18 @@ function mouseMove(event) {
   topCard.style.transform = `translateX(${dragDistance}px) rotate(${
     -4 * tension
   }deg)`;
+
+  middleCard.style.transition = "transform 0.8s ease";
+  bottomCard.style.transition = "transform 0.8s ease";
+  middleCard.style.transform = "translate(80px, -10px) scale(1) rotate(4deg)";
+  bottomCard.style.transform =
+    "translate(140px, -10px) scale(0.9) rotate(-2deg)";
+  if (Math.abs(dragDistance) <= 160) {
+    middleCard.style.transform =
+      "translate(80px, -10px) scale(0.9) rotate(4deg)";
+    bottomCard.style.transform =
+      "translate(140px, -10px) scale(0.8) rotate(-2deg)";
+  }
 }
 
 function mouseUp() {
@@ -70,5 +82,5 @@ function mouseUp() {
 
   setTimeout(() => {
     topCard.style.transition = ""; // Reset transition
-  }, 300);
+  }, 800);
 }
