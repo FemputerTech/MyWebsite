@@ -66,3 +66,74 @@ window.addEventListener("scroll", () => {
     header.removeEventListener("mouseleave", hideNavbar);
   }
 });
+
+// Navlink clicks
+function getRandomAdjustment() {
+  return Math.random() < 0.5 ? -1 : 0; // Randomly returns -1 or 0
+}
+
+const options = {
+  duration: 400,
+};
+
+const ballSizes = [2, 4, 6];
+
+const homeNavLink = document.getElementById("home-page");
+
+homeNavLink.addEventListener("click", () => {
+  if (window.location.href === homeNavLink.href) {
+    console.log("splatter!");
+    for (let i = 0; i < 3; i++) {
+      createBalls();
+    }
+  }
+});
+
+function createBalls() {
+  const linkRect = homeNavLink.getBoundingClientRect();
+  const centerX = linkRect.left + linkRect.width / 2;
+  const centerY = linkRect.top + linkRect.height / 2;
+  const balls = document.querySelector(".balls");
+  const ball = document.createElement("div");
+  ball.className = "ball";
+  const randomSize = ballSizes[Math.floor(Math.random() * ballSizes.length)];
+  ball.style.width = `${randomSize}px`;
+  ball.style.height = `${randomSize}px`;
+  ball.style.display = "block";
+  ball.style.left = `${centerX}px`;
+  ball.style.top = `${centerY}px`;
+  balls.appendChild(ball);
+  const x = Math.random() < 0.5 ? -1 : 1;
+  const randomYOffset = Math.random() * 5;
+  const keyframes = [
+    { opacity: 1, transform: `translateX(${0 * x}) translatey(0)` }, // 0%
+    {
+      opacity: 0,
+      transform: `translate(${2 * x}px, ${-10 - randomYOffset}px)`,
+    }, // 10%
+    {
+      opacity: 1,
+      transform: `translate(${4 * x}px, ${-20 - randomYOffset}px)`,
+    }, // 20%
+    {
+      opacity: 1,
+      transform: `translate(${8 * x}px, ${-30 - randomYOffset}px)`,
+    }, // 30%
+    {
+      opacity: 1,
+      transform: `translate(${16 * x}px, ${-40 - randomYOffset}px)`,
+    }, // 40%
+    {
+      opacity: 1,
+      transform: `translate(${32 * x}px, ${-50 - randomYOffset}px)`,
+    }, // 50%
+    {
+      opacity: 0,
+      transform: `translate(${64 * x}px, ${-30 - randomYOffset}px)`,
+    }, // 100%
+  ];
+  const animation = ball.animate(keyframes, options);
+  animation.onfinish = () => {
+    balls.removeChild(ball);
+  };
+}
