@@ -32,14 +32,14 @@ function mouseMove(event) {
 
   middleCard.style.transition = "transform 0.8s ease";
   bottomCard.style.transition = "transform 0.8s ease";
-  middleCard.style.transform = "translate(0px, -10px) scale(1) rotate(4deg)";
+  middleCard.style.transform = "translate(70px, -10px) scale(1) rotate(4deg)";
   bottomCard.style.transform =
-    "translate(60px, -10px) scale(0.9) rotate(-2deg)";
+    "translate(130px, -10px) scale(0.9) rotate(-2deg)";
   if (Math.abs(dragDistance) <= 160) {
     middleCard.style.transform =
-      "translate(0px, -10px) scale(0.9) rotate(4deg)";
+      "translate(70px, -10px) scale(0.9) rotate(4deg)";
     bottomCard.style.transform =
-      "translate(60px, -10px) scale(0.8) rotate(-2deg)";
+      "translate(130px, -10px) scale(0.8) rotate(-2deg)";
   }
 }
 
@@ -51,12 +51,19 @@ function mouseUp() {
   if (Math.abs(dragDistance) > 160) {
     topCard.classList.remove("top");
     topCard.classList.add("bottom");
-    topCard.style.transform = "translate(60px, -10px) scale(0.8) rotate(-2deg)";
+    topCard.style.transform =
+      "translate(130px, -10px) scale(0.8) rotate(-2deg)";
 
     middleCard.classList.remove("middle");
     middleCard.classList.add("top");
     middleCard.style.transition = "transform 0.8s ease";
-    middleCard.style.transform = "translate(-70px, 0px) rotate(-4deg)";
+    middleCard.style.transform = "translate(0px, 0px) rotate(-4deg)";
+
+    bottomCard.classList.remove("bottom");
+    bottomCard.classList.add("middle");
+    bottomCard.style.transition = "transform 0.8s ease";
+    bottomCard.style.transform =
+      "translate(70px, -10px) scale(0.9) rotate(4deg)";
 
     const CardTexts = document.querySelectorAll(".about-text");
     CardTexts.forEach((cardText) => {
@@ -66,12 +73,6 @@ function mouseUp() {
         cardText.classList.remove("active");
       }
     });
-
-    bottomCard.classList.remove("bottom");
-    bottomCard.classList.add("middle");
-    bottomCard.style.transition = "transform 0.8s ease";
-    bottomCard.style.transform =
-      "translate(0px, -10px) scale(0.9) rotate(4deg)";
 
     topCard.style.zIndex = 18;
     middleCard.style.zIndex = 20;

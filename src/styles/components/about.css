@@ -1,9 +1,4 @@
 /* ****************** About ****************** */
-.about {
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-
 .about-content {
   display: flex;
   flex-direction: row-reverse;
@@ -48,19 +43,16 @@
 }
 
 .card.top {
-  /* transform: translate(-70px, 0px) rotate(-4deg); */
   transform: translate(0px, 0px) rotate(-4deg);
   z-index: 20;
 }
 
 .card.middle {
-  /* transform: translate(0px, -10px) scale(0.9) rotate(4deg); */
   transform: translate(70px, -10px) scale(0.9) rotate(4deg);
   z-index: 19;
 }
 
 .card.bottom {
-  /* transform: translate(60px, -10px) scale(0.8) rotate(-2deg); */
   transform: translate(130px, -10px) scale(0.8) rotate(-2deg);
   z-index: 18;
 }
