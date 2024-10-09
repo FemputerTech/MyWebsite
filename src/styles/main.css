@@ -74,13 +74,6 @@ p {
   padding: 10px 0;
 }
 
-.balls {
-  position: absolute;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
-
 .ball {
   display: none;
   position: absolute;
