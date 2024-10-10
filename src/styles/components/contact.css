@@ -2,7 +2,6 @@
 form {
   display: flex;
   flex-direction: column;
-  padding: 0 100px;
   width: 100%;
 }
 
@@ -28,16 +27,22 @@ form textarea::placeholder {
   color: #adaeb0;
 }
 
-form .name {
-  display: flex;
-  gap: 20px;
-}
+@media (min-width: 852px) {
+  form {
+    padding: 0 100px;
+  }
 
-form .name input {
-  flex: 1;
-}
+  form .name {
+    display: flex;
+    gap: 20px;
+  }
 
-#submit-button {
-  align-self: center;
-  width: 100px;
+  form .name input {
+    flex: 1;
+  }
+
+  #submit-button {
+    align-self: center;
+    width: 100px;
+  }
 }
