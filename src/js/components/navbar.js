@@ -29,32 +29,30 @@ function toggleNavList() {
 // ================== Navbar Hide ================== //
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 160) {
-    header.style.position = "fixed";
-    topBorder.style.position = "fixed";
-    hideNavbar();
-
-    header.addEventListener("mouseenter", showNavbar);
-    header.addEventListener("mouseleave", hideNavbar);
+    // header.style.position = "fixed";
+    // topBorder.style.position = "fixed";
+    // hideNavbar();
+    // header.addEventListener("mouseenter", showNavbar);
+    // header.addEventListener("mouseleave", hideNavbar);
   } else {
-    header.style.position = "relative";
-    topBorder.style.position = "relative";
-    showNavbar();
-
-    header.removeEventListener("mouseenter", showNavbar);
-    header.removeEventListener("mouseleave", hideNavbar);
+    // header.style.position = "relative";
+    // topBorder.style.position = "relative";
+    // showNavbar();
+    // header.removeEventListener("mouseenter", showNavbar);
+    // header.removeEventListener("mouseleave", hideNavbar);
   }
 });
 
 const showNavbar = () => {
   header.style.opacity = 1;
-  topBorder.style.opacity = 1;
+  //   topBorder.style.opacity = 1;
   //   header.style.top = "0";
   //   topBorder.style.top = "0";
 };
 
 const hideNavbar = () => {
   header.style.opacity = 0;
-  topBorder.style.opacity = 0;
+  //   topBorder.style.opacity = 0;
   //   header.style.top = "-100px";
   //   topBorder.style.top = "-100px";
 };
