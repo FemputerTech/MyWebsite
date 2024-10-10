@@ -41,7 +41,7 @@
   border: 2px solid black;
   box-shadow: 4px 4px 1px rgba(0, 0, 0, 1);
   cursor: grab;
-  font-size: 0.8em;
+  /* font-size: 0.8em; */
   padding: 10px;
   width: 380px;
   height: calc(380px + 120px);
@@ -63,11 +63,20 @@
   z-index: 18;
 }
 
+.card-number {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-bottom: none;
+  border-radius: 18px 18px 0 0;
+  font-family: var(--font-tarot);
+}
+
 .card-tags {
   display: flex;
   flex-direction: column;
   border: 2px solid black;
-  border-radius: 18px 18px 0 0;
+  border-top: none;
   padding: 20px;
   height: 100%;
   gap: 10px;
@@ -88,4 +97,6 @@
   border: 2px solid black;
   border-top: none;
   border-radius: 0 0 18px 18px;
+  font-family: var(--font-tarot);
+  letter-spacing: 2px;
 }

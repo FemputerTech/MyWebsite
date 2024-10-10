@@ -8,6 +8,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "GrimReaperFont";
+  src: url("../assets/fonts/GrimReaper-jEBRO.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,6 +38,7 @@ html {
   --font-family: "Poppins", sans-serif;
   --font-heading: "Abril Fatface", serif;
   --font-logo: "HerosAssembleFont";
+  --font-tarot: "GrimReaperFont";
 
   font-size: 16px;
   line-height: 1.8;
