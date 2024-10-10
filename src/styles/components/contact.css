@@ -27,7 +27,8 @@ form textarea::placeholder {
   color: #adaeb0;
 }
 
-@media (min-width: 852px) {
+/* ================ MEDIA QUERIES ================ */
+@media (min-width: 768px) {
   form {
     padding: 0 100px;
   }

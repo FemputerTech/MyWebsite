@@ -30,16 +30,14 @@
 
 .logo-text {
   font-family: var(--font-logo);
-  font-size: 2em;
+  font-size: 1.4em;
   font-weight: 800;
-  /* font-size: 2em; */
-  /* font-weight: 100; */
 }
 
 nav {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .navbar-toggle {
@@ -108,7 +106,24 @@ nav {
   }
 }
 
-@media (min-width: 852px) {
+/* ================ MEDIA QUERIES ================ */
+@media (min-width: 378px) and (max-width: 575px) {
+  .logo-text {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 576px) {
+  .logo-text {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 866px) {
+  .animated-ghost-overlay {
+    height: 80px;
+  }
+
   .logo-container {
     align-self: center;
   }
@@ -117,8 +132,8 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: auto;
     align-self: center;
+    height: auto;
   }
 
   .navbar-toggle {

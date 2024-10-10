@@ -8,8 +8,9 @@ const navLinks = document.querySelectorAll(".nav-link");
 const splatterSizes = [2, 4, 6];
 
 // ================== Animation ================== //
+// Hide after animation ends, otherwise navbar will be completely covered
 animatedGhostOverlay.addEventListener("animationend", function () {
-  this.style.display = "none"; // Hide after animation ends, otherwise navbar will be completely covered
+  this.style.display = "none";
 });
 
 // ================== Toggle ================== //

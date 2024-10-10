@@ -8,7 +8,12 @@
   flex-direction: column;
 }
 
-@media (min-width: 852px) {
+.cards {
+  display: none;
+}
+
+/* ================ MEDIA QUERIES ================ */
+@media (min-width: 768px) {
   .about-content {
     flex-direction: row-reverse;
     margin-top: 40px;

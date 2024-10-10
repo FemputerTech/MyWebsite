@@ -1,5 +1,6 @@
 // border.js
 const borders = document.querySelectorAll(".border");
+console.log(borders);
 
 borders.forEach((border) => {
   border.innerHTML = `<svg

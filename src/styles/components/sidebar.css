@@ -1,0 +1,36 @@
+/* ****************** Sidebar ****************** */
+.sidebar {
+  display: none;
+}
+
+/* ================ MEDIA QUERIES ================ */
+@media (min-width: 866px) {
+  .sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 60px;
+    height: 100%;
+    z-index: 101;
+  }
+
+  .social-links {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 40px;
+    gap: 20px;
+  }
+
+  .social-links a {
+    color: var(--text-normal);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+}

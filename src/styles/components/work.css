@@ -27,7 +27,8 @@
   transition: transform 0.3s ease;
 }
 
-@media (min-width: 852px) {
+/* ================ MEDIA QUERIES ================ */
+@media (min-width: 768px) {
   .project {
     flex-direction: row;
     justify-content: space-between;

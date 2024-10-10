@@ -16,10 +16,10 @@ const renderProjects = () => {
     }" />
           </div>
           <div class="project-content">
-            <h2 class="project-title">${project.title}</h2>
-            <h3>Technologies: <span class="technologies">${project.technologies.join(
+            <h3 class="project-title">${project.title}</h3>
+            <h4>Technologies: <span class="technologies">${project.technologies.join(
               ", "
-            )}</span></h3>
+            )}</span></h4>
             <p>${project.description}</p>
             <a class="github-link" href="${
               project.github
