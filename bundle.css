@@ -74,7 +74,6 @@ body {
   font-family: var(--font-family);
   font-size: 1em;
   font-weight: 400;
-  /* overflow-x: hidden; */
   height: 100%;
 }
 
@@ -84,7 +83,8 @@ header {
   align-items: center;
   background-color: var(--header-color);
   padding: 10px 20px;
-  min-height: 100px;
+  width: 100%;
+  height: 100px;
   transition: opacity 0.3s ease;
   z-index: 100;
 }
@@ -276,27 +276,27 @@ p {
 }
 
 @media (min-width: 866px) {
-  header {
+  /* header {
     grid-row: 1;
     align-items: center;
     opacity: 1;
-    /* padding: 10px 60px; */
+    padding: 10px 60px;
     top: 0;
     left: 0;
     width: 100%;
     height: 100px;
-  }
+  } */
 
   #top-border {
     grid-row: 2;
     opacity: 1;
   }
 
-  #top-border.hidden,
+  /* #top-border.hidden,
   header.hidden {
     opacity: 0;
     pointer-events: none;
-  }
+  } */
 
   main {
     grid-row: 3;
@@ -375,7 +375,6 @@ p {
     border: 2px solid black;
     box-shadow: 4px 4px 1px rgba(0, 0, 0, 1);
     cursor: grab;
-    /* font-size: 0.8em; */
     padding: 10px;
     width: 380px;
     height: calc(380px + 120px);
