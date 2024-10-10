@@ -5,8 +5,15 @@ const navbarToggle = document.querySelector(".navbar-toggle");
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 const topBorder = document.getElementById("top-border");
+const navListToggle = document.querySelector(".nav-list-toggle");
 const navLinks = document.querySelectorAll(".nav-link");
 const splatterSizes = [2, 4, 6];
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 866) {
+    navListToggle.style.display = "none";
+  }
+});
 
 // ================== Animation ================== //
 // Hide after animation ends, otherwise navbar will be completely covered
@@ -18,12 +25,13 @@ animatedGhostOverlay.addEventListener("animationend", function () {
 navbarToggle.addEventListener("click", toggleNavList);
 
 function toggleNavList() {
-  const navList = document.querySelector(".nav-list");
-
-  if (navList.style.display === "") {
-    navList.style.display = "flex";
+  if (
+    navListToggle.style.display === "none" ||
+    navListToggle.style.display === ""
+  ) {
+    navListToggle.style.display = "flex";
   } else {
-    navList.style.display = "";
+    navListToggle.style.display = "";
   }
 }
 
