@@ -633,7 +633,7 @@ form textarea::placeholder {
   top: 0;
   margin: 10px;
   width: 110%;
-  height: 80px;
+  height: 60px;
   animation: fadeIn 4s linear;
 }
 
