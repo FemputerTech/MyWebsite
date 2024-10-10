@@ -1,4 +1,8 @@
 /* ****************** About ****************** */
+.about {
+  background-color: white;
+}
+
 .about-content {
   display: flex;
   flex-direction: row-reverse;

@@ -1,4 +1,8 @@
 /* ****************** Work ****************** */
+.work {
+  background-color: white;
+}
+
 .projects-list {
   display: flex;
   flex-direction: column;
