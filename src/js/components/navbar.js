@@ -2,6 +2,7 @@
 // import "../../styles/components/navbar.css";
 const animatedGhostOverlay = document.querySelector(".animated-ghost-overlay");
 const navbarToggle = document.querySelector(".navbar-toggle");
+const main = document.querySelector("main");
 const header = document.querySelector("header");
 const topBorder = document.getElementById("top-border");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -29,30 +30,34 @@ function toggleNavList() {
 // ================== Navbar Hide ================== //
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 160) {
-    // header.style.position = "fixed";
-    // topBorder.style.position = "fixed";
-    // hideNavbar();
-    // header.addEventListener("mouseenter", showNavbar);
-    // header.addEventListener("mouseleave", hideNavbar);
+    header.style.position = "fixed";
+    main.style.paddingTop = "160px";
+    topBorder.style.position = "fixed";
+    topBorder.style.top = "100px";
+    hideNavbar();
+    header.addEventListener("mouseenter", showNavbar);
+    header.addEventListener("mouseleave", hideNavbar);
   } else {
-    // header.style.position = "relative";
-    // topBorder.style.position = "relative";
-    // showNavbar();
-    // header.removeEventListener("mouseenter", showNavbar);
-    // header.removeEventListener("mouseleave", hideNavbar);
+    header.style.position = "relative";
+    main.style.paddingTop = "0";
+    topBorder.style.position = "relative";
+    topBorder.style.top = "0";
+    showNavbar();
+    header.removeEventListener("mouseenter", showNavbar);
+    header.removeEventListener("mouseleave", hideNavbar);
   }
 });
 
 const showNavbar = () => {
   header.style.opacity = 1;
-  //   topBorder.style.opacity = 1;
+  topBorder.style.opacity = 1;
   //   header.style.top = "0";
   //   topBorder.style.top = "0";
 };
 
 const hideNavbar = () => {
   header.style.opacity = 0;
-  //   topBorder.style.opacity = 0;
+  topBorder.style.opacity = 0;
   //   header.style.top = "-100px";
   //   topBorder.style.top = "-100px";
 };
