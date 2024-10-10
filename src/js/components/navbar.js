@@ -29,23 +29,25 @@ function toggleNavList() {
 
 // ================== Navbar Hide ================== //
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 160) {
-    header.style.position = "fixed";
-    main.style.paddingTop = "160px";
-    topBorder.style.position = "fixed";
-    topBorder.style.top = "100px";
-    hideNavbar();
-    header.addEventListener("mouseenter", showNavbar);
-    header.addEventListener("mouseleave", hideNavbar);
-  } else {
-    header.style.position = "relative";
-    main.style.paddingTop = "0";
-    topBorder.style.position = "relative";
-    topBorder.style.top = "0";
-    showNavbar();
-    header.removeEventListener("mouseenter", showNavbar);
-    header.removeEventListener("mouseleave", hideNavbar);
-  }
+  if (window.innerWidth > 865) {
+    if (window.scrollY >= 160) {
+      header.style.position = "fixed";
+      main.style.paddingTop = "160px";
+      topBorder.style.position = "fixed";
+      topBorder.style.top = "100px";
+      hideNavbar();
+      header.addEventListener("mouseenter", showNavbar);
+      header.addEventListener("mouseleave", hideNavbar);
+    } else {
+      header.style.position = "relative";
+      main.style.paddingTop = "0";
+      topBorder.style.position = "relative";
+      topBorder.style.top = "0";
+      showNavbar();
+      header.removeEventListener("mouseenter", showNavbar);
+      header.removeEventListener("mouseleave", hideNavbar);
+    }
+  } else return;
 });
 
 const showNavbar = () => {
@@ -64,20 +66,22 @@ const hideNavbar = () => {
 
 // ================== NavLinks ================== //
 navLinks.forEach((link) => {
-  link.addEventListener("mousedown", () => {
-    link.style.boxShadow = "none";
-    link.style.transform = "translate(2px, 2px)";
-  });
-  link.addEventListener("mouseup", () => resetStyles(link));
-  link.addEventListener("mouseleave", () => resetStyles(link));
-  link.addEventListener("click", () => {
-    if (window.location.href === link.href) {
-      console.log("splatter!");
-      for (let i = 0; i < 3; i++) {
-        createSplatter(link, event);
+  if (window.innerWidth > 865) {
+    link.addEventListener("mousedown", () => {
+      link.style.boxShadow = "none";
+      link.style.transform = "translate(2px, 2px)";
+    });
+    link.addEventListener("mouseup", () => resetStyles(link));
+    link.addEventListener("mouseleave", () => resetStyles(link));
+    link.addEventListener("click", () => {
+      if (window.location.href === link.href) {
+        console.log("splatter!");
+        for (let i = 0; i < 3; i++) {
+          createSplatter(link, event);
+        }
       }
-    }
-  });
+    });
+  }
 });
 
 // ~~~~~~~~~~~~~~~~~~~ mouseup & mouseleave ~~~~~~~~~~~~~~~~~~~ //
