@@ -8,11 +8,19 @@ form {
 
 form input,
 form textarea {
-  border: 1px solid #e4e4e4;
+  /* border: 1px solid #e4e4e4; */
+  border: 2px solid black;
+  border-radius: 10px;
+  /* box-shadow: 4px 4px 1px rgba(0, 0, 0, 1); */
   font-family: var(--font-family);
   padding: 10px 20px;
   margin-bottom: 20px;
   width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
 }
 
 form input::placeholder,
