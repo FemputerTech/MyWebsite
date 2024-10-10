@@ -1,13 +1,17 @@
 /*!***********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css ***!
   \***********************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (1) ***!
   \***************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap);
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (2) ***!
+  \***************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap);
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (3) ***!
   \***************************************************************************/
 @font-face {
   font-family: "HerosAssembleFont";
@@ -43,9 +47,13 @@ html {
   --text-faint: #f0eae2;
   --body-color: #f0eae2;
 
-  --font-family: "Poppins", sans-serif;
-  --font-heading: "Abril Fatface", serif;
-  --font-logo: "HerosAssembleFont";
+  --font-family: "Lato", sans-serif;
+
+  --font-logo: "SUSE", sans-serif;
+  --font-heading: "SUSE", sans-serif;
+
+  --font-button: "Space Grotesk", sans-serif;
+
   --font-tarot: "GrimReaperFont";
 
   font-size: 16px;
@@ -65,31 +73,37 @@ body {
   color: var(--text-normal);
   font-family: var(--font-family);
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   overflow-x: hidden;
   height: 100%;
 }
 
 h1 {
   font-family: var(--font-heading);
-  font-size: 3em;
-  font-weight: 400;
+  font-size: 4.2em;
+  font-weight: 800;
   line-height: 1.2em;
+  margin-bottom: 30px;
 }
 
 h2 {
-  font-size: 1.6em;
-  font-weight: 300;
+  font-size: 3em;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 1.4em;
-  font-weight: 500;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 p {
   font-size: 1em;
-  padding: 10px 0;
 }
 
 header {
@@ -139,9 +153,10 @@ footer {
 .primary-button {
   color: var(--text-faint);
   background-color: var(--primary-color);
-  border: 1.5px solid black;
-  border-radius: 4px;
+  border: 2px solid black;
+  border-radius: 10px;
   box-shadow: 4px 4px 1px rgba(0, 0, 0, 1);
+  font-family: var(--font-button);
   font-size: 1.1em;
   font-weight: 500;
   padding: 10px 20px;
@@ -308,7 +323,7 @@ footer {
 .card-number {
   display: flex;
   justify-content: center;
-  border: 2px solid black;
+  border: 1px solid black;
   border-bottom: none;
   border-radius: 18px 18px 0 0;
   font-family: var(--font-tarot);
@@ -317,7 +332,7 @@ footer {
 .card-tags {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  border: 1px solid black;
   border-top: none;
   padding: 20px;
   height: 100%;
@@ -336,7 +351,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: white;
-  border: 2px solid black;
+  border: 1px solid black;
   border-top: none;
   border-radius: 0 0 18px 18px;
   font-family: var(--font-tarot);
@@ -611,7 +626,9 @@ form .name input {
 .logo-text {
   font-family: var(--font-logo);
   font-size: 2em;
-  font-weight: 100;
+  font-weight: 800;
+  /* font-size: 2em; */
+  /* font-weight: 100; */
 }
 
 nav {
@@ -640,9 +657,10 @@ nav {
 
 .nav-link {
   color: var(--text-normal);
+  font-family: var(--font-button);
+  letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 .dark-mode-toggle {

@@ -31,7 +31,9 @@
 .logo-text {
   font-family: var(--font-logo);
   font-size: 2em;
-  font-weight: 100;
+  font-weight: 800;
+  /* font-size: 2em; */
+  /* font-weight: 100; */
 }
 
 nav {
@@ -60,9 +62,10 @@ nav {
 
 .nav-link {
   color: var(--text-normal);
+  font-family: var(--font-button);
+  letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 .dark-mode-toggle {
