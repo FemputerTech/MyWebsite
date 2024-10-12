@@ -5,7 +5,7 @@ let topCard = document.querySelector(".card.top");
 let middleCard = document.querySelector(".card.middle");
 let bottomCard = document.querySelector(".card.bottom");
 
-let transformFactor = window.innerWidth >= 768 ? 2 : 1;
+let transformFactor = window.innerWidth > 991 ? 2 : 1;
 let topTransform = [`${-40 * transformFactor}px, 0px`, 1, `${-4}deg`];
 let middleTransform = [`${10 * transformFactor}px, -10px`, 0.9, `${4}deg`];
 let bottomTransform = [`${50 * transformFactor}px, -10px`, 0.8, `${-2}deg`];

@@ -3,13 +3,14 @@
   background-color: white;
 }
 
-.about-text {
-  position: relative;
-}
 .about-content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.about-text {
+  position: relative;
 }
 
 .cards {
@@ -30,6 +31,18 @@
   cursor: grab;
   padding: 10px;
   user-select: none;
+}
+
+.card.top {
+  z-index: 20;
+}
+
+.card.middle {
+  z-index: 19;
+}
+
+.card.bottom {
+  z-index: 18;
 }
 
 .about-text-container {
@@ -169,7 +182,6 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: 40px;
-    /* gap: 40px; */
   }
 
   .cards {
