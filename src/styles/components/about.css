@@ -50,9 +50,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    background-color: var(--primary-color);
+    /* background-color: #4fff33; */
     border-radius: 20px;
-    border: 2px solid black;
     box-shadow: 4px 4px 1px rgba(0, 0, 0, 1);
     cursor: grab;
     padding: 10px;
@@ -76,22 +76,55 @@
     z-index: 18;
   }
 
+  .card-background {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 18px;
+    /* background-color: var(--primary-color); */
+    background-color: var(--body-color);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
+    height: 100%;
+  }
+
+  #background-past {
+    /* background-color: #33ff5e; */
+    background-image: url("../../assets/cards/past.png"),
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  }
+
+  #background-present {
+    /* background-color: #ffa233; */
+    background-image: url("../../assets/cards/present.png"),
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  }
+
+  #background-future {
+    background-image: url("../../assets/cards/future.png"),
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  }
+
   .card-number {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
-    border-bottom: none;
-    border-radius: 18px 18px 0 0;
+    /* color: #f9f5ff; */
+    color: var(--text-normal);
     font-family: var(--font-tarot);
+    font-size: 1.5em;
+    /* text-shadow: 2px 4px 1px rgba(0, 0, 0, 1); */
+    padding: 10px;
+    height: 70px;
   }
 
   .card-tags {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    border-top: none;
-    padding: 20px;
-    height: 100%;
+    flex: 2;
+    padding: 50px;
     gap: 10px;
   }
 
@@ -106,11 +139,13 @@
   .card-title {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: white;
     border: 1px solid black;
-    border-top: none;
     border-radius: 0 0 18px 18px;
     font-family: var(--font-tarot);
+    font-size: 1.5em;
     letter-spacing: 2px;
+    height: 70px;
   }
 }

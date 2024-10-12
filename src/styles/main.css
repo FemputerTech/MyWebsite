@@ -99,12 +99,18 @@ section {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--header-color);
+  font-size: 0.9em;
   padding: 30px;
   height: 100px;
   z-index: 100;
+}
+
+footer a {
+  color: var(--text-normal);
 }
 
 h1 {
