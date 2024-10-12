@@ -90,6 +90,7 @@
 .card-tags {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   flex: 2;
   gap: 10px;
 }
@@ -223,7 +224,7 @@
   }
 
   .card-tags {
-    padding: 50px;
+    padding: 10px 40px;
   }
 
   .card-tags p {
