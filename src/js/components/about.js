@@ -5,6 +5,11 @@ let topCard = document.querySelector(".card.top");
 let middleCard = document.querySelector(".card.middle");
 let bottomCard = document.querySelector(".card.bottom");
 
+let transformFactor = window.innerWidth >= 768 ? 2 : 1;
+let topTransform = [`${-40 * transformFactor}px, 0px`, 1, `${-4}deg`];
+let middleTransform = [`${10 * transformFactor}px, -10px`, 0.9, `${4}deg`];
+let bottomTransform = [`${50 * transformFactor}px, -10px`, 0.8, `${-2}deg`];
+
 const maxDragDistance = window.innerWidth / 2;
 let dragDistance = 0;
 let offsetX = 0;
@@ -32,14 +37,16 @@ function mouseMove(event) {
 
   middleCard.style.transition = "transform 0.8s ease";
   bottomCard.style.transition = "transform 0.8s ease";
-  middleCard.style.transform = "translate(70px, -10px) scale(1) rotate(4deg)";
-  bottomCard.style.transform =
-    "translate(130px, -10px) scale(0.9) rotate(-2deg)";
+  middleCard.style.transform = `translate(${
+    middleTransform[0]
+  }) scale(${1}) rotate(${middleTransform[2]})`;
+  bottomCard.style.transform = `translate(${
+    bottomTransform[0]
+  }) scale(${0.9}) rotate(${bottomTransform[2]})`;
   if (Math.abs(dragDistance) <= 160) {
-    middleCard.style.transform =
-      "translate(70px, -10px) scale(0.9) rotate(4deg)";
+    middleCard.style.transform = `translate(${middleTransform[0]}) scale(${middleTransform[1]}) rotate(${middleTransform[2]})`;
     bottomCard.style.transform =
-      "translate(130px, -10px) scale(0.8) rotate(-2deg)";
+      "translate(48px, -10px) scale(0.8) rotate(-2deg)";
   }
 }
 
@@ -51,19 +58,17 @@ function mouseUp() {
   if (Math.abs(dragDistance) > 160) {
     topCard.classList.remove("top");
     topCard.classList.add("bottom");
-    topCard.style.transform =
-      "translate(130px, -10px) scale(0.8) rotate(-2deg)";
+    topCard.style.transform = `translate(${bottomTransform[0]}) scale(${bottomTransform[1]}) rotate(${bottomTransform[2]})`;
 
     middleCard.classList.remove("middle");
     middleCard.classList.add("top");
     middleCard.style.transition = "transform 0.8s ease";
-    middleCard.style.transform = "translate(0px, 0px) rotate(-4deg)";
+    middleCard.style.transform = `translate(${topTransform[0]}) scale(${topTransform[1]}) rotate(${topTransform[2]})`;
 
     bottomCard.classList.remove("bottom");
     bottomCard.classList.add("middle");
     bottomCard.style.transition = "transform 0.8s ease";
-    bottomCard.style.transform =
-      "translate(70px, -10px) scale(0.9) rotate(4deg)";
+    bottomCard.style.transform = `translate(${middleTransform[0]}) scale(${middleTransform[1]}) rotate(${middleTransform[2]})`;
 
     const aboutText = document.querySelector(".about-text");
     aboutText.style.opacity = 1;
@@ -86,7 +91,7 @@ function mouseUp() {
 
     [topCard, middleCard, bottomCard] = [middleCard, bottomCard, topCard];
   } else {
-    topCard.style.transform = "translate(-70px, 0px) rotate(-4deg)";
+    topCard.style.transform = `translate(${topTransform[0]}) scale(${topTransform[1]}) rotate(${topTransform[2]})`;
   }
 
   topCard.addEventListener("mousedown", mouseDown);
