@@ -371,6 +371,7 @@ p {
   cursor: grab;
   padding: 10px;
   user-select: none;
+  will-change: transform;
 }
 
 .card.top {
