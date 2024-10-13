@@ -1,0 +1,44 @@
+[
+  {
+    "title": "future",
+    "number": "III",
+    "position": "bottom",
+    "active": "",
+    "tags": [
+      {
+        "description": "Become a master in JavaScript frameworks"
+      }
+    ],
+    "description": "I aim to master web development and UX/UI design, focusing on emerging technologies like Web3 and AI. I envision working at an innovative company where I can grow with the industry, embracing new challenges. My goal is to continuously improve, stay updated with web development trends, and wake up excited to create and contribute each day."
+  },
+  {
+    "title": "present",
+    "number": "II",
+    "position": "middle",
+    "active": "",
+    "tags": [
+      {
+        "description": "Graduated with a BS in Computer Science"
+      },
+      {
+        "description": "Learned Data Structures, Algorithms & Complexity, & Object-Oriented Programming"
+      }
+    ],
+    "description": "I recently graduated with a Bachelor of Science in Computer Science, discovering my passion for web development and design. I am currently enhancing my skills in CSS, JavaScript, and React while working on personal projects on GitHub. I meticulously refine my work to create intuitive designs and love bringing ideas to life through clean code. My goal is to grow as a web developer and designer, specializing in intuitive user interfaces and performance optimization."
+  },
+  {
+    "title": "past",
+    "number": "I",
+    "position": "top",
+    "active": "active",
+    "tags": [
+      {
+        "description": "Mastered Excel and VBA"
+      },
+      {
+        "description": "Learned data analytics and SQL"
+      }
+    ],
+    "description": "I started my career as a Group Underwriter at a health insurance company, later transitioning to a Data Analyst role. My curiosity about improving workflows led me to learn VBA and create user-friendly interfaces to optimize Excel tools. This sparked my passion for blending creativity with technical skills. A colleague introduced me to Front-End development, solidifying my decision to pursue Computer Science and shaping my problem-solving approach to web development."
+  }
+]

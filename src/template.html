@@ -144,77 +144,23 @@
         <h2>About Me</h2>
         <div class="about-content">
           <div class="cards">
-            <div class="card bottom" id="future">
-              <div class="card-background" id="background-future">
-                <div class="card-number">III</div>
-                <div class="card-tags">
-                  <p>Become a master in JavaScript frameworks</p>
+            <template id="card-template">
+              <div class="card" id="">
+                <div class="card-background" id="">
+                  <div class="card-number"></div>
+                  <div class="card-tags"></div>
+                  <div class="card-title"></div>
                 </div>
-                <div class="card-title">FUTURE</div>
               </div>
-            </div>
-            <div class="card middle" id="present">
-              <div class="card-background" id="background-present">
-                <div class="card-number">II</div>
-                <div class="card-tags">
-                  <p>Graduated with a BS in Computer Science</p>
-                  <p>
-                    Learned Data Structures, Algorithms & Complexity, &
-                    Object-Oriented Programming
-                  </p>
-                </div>
-                <div class="card-title">PRESENT</div>
-              </div>
-            </div>
-            <div class="card top" id="past">
-              <div class="card-background" id="background-past">
-                <div class="card-number">I</div>
-                <div class="card-tags">
-                  <p>Mastered Excel and VBA</p>
-                  <p>Learned data analytics and SQL</p>
-                </div>
-                <div class="card-title">PAST</div>
-              </div>
-            </div>
+            </template>
           </div>
           <div class="about-text-container">
-            <div class="about-text past active">
-              <h3>My Past</h3>
-              <p>
-                I started my career as a Group Underwriter at a health insurance
-                company, later transitioning to a Data Analyst role. My
-                curiosity about improving workflows led me to learn VBA and
-                create user-friendly interfaces to optimize Excel tools. This
-                sparked my passion for blending creativity with technical
-                skills. A colleague introduced me to Front-End development,
-                solidifying my decision to pursue Computer Science and shaping
-                my problem-solving approach to web development.
-              </p>
-            </div>
-            <div class="about-text future">
-              <h3>My Future</h3>
-              <p>
-                I aim to master web development and UX/UI design, focusing on
-                emerging technologies like Web3 and AI. I envision working at an
-                innovative company where I can grow with the industry, embracing
-                new challenges. My goal is to continuously improve, stay updated
-                with web development trends, and wake up excited to create and
-                contribute each day.
-              </p>
-            </div>
-            <div class="about-text present">
-              <h3>My Present</h3>
-              <p>
-                I recently graduated with a Bachelor of Science in Computer
-                Science, discovering my passion for web development and design.
-                I am currently enhancing my skills in CSS, JavaScript, and React
-                while working on personal projects on GitHub. I meticulously
-                refine my work to create intuitive designs and love bringing
-                ideas to life through clean code. My goal is to grow as a web
-                developer and designer, specializing in intuitive user
-                interfaces and performance optimization.
-              </p>
-            </div>
+            <template id="about-text-template">
+              <div class="about-text">
+                <h3></h3>
+                <p></p>
+              </div>
+            </template>
           </div>
         </div>
       </section>

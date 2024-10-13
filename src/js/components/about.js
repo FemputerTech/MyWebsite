@@ -1,5 +1,56 @@
 // about.js
-// import "../../styles/components/about.css";
+import cards from "../../data/cards.json";
+
+const renderAbout = () => {
+  const cardsDiv = document.querySelector(".cards");
+  const aboutTextDiv = document.querySelector(".about-text-container");
+
+  const cardTemplate = document.getElementById("card-template");
+  const aboutTextTemplate = document.getElementById("about-text-template");
+
+  const cardDocumentFragment = document.createDocumentFragment();
+  const aboutTextDocumentFragment = document.createDocumentFragment();
+
+  cards.forEach((card) => {
+    const cardClone = cardTemplate.content.cloneNode(true);
+    const aboutTextClone = aboutTextTemplate.content.cloneNode(true);
+
+    // Populate card template
+    cardClone.querySelector(".card").classList.add(card.position);
+    cardClone.querySelector(".card").id = card.title;
+    cardClone.querySelector(".card-background").id = `background-${card.title}`;
+    cardClone.querySelector(".card-number").textContent = card.number;
+
+    card.tags.forEach((tag) => {
+      const pTag = document.createElement("p");
+      pTag.textContent = tag.description;
+      cardClone.querySelector(".card-tags").appendChild(pTag);
+    });
+
+    cardClone.querySelector(".card-title").textContent =
+      card.title.toUpperCase();
+
+    // Populate about text template
+    aboutTextClone.querySelector(".about-text").classList.add(card.title);
+    if (card.active) {
+      aboutTextClone.querySelector(".about-text").classList.add(card.active);
+    }
+    aboutTextClone.querySelector("h3").textContent = `My ${
+      card.title.charAt(0).toUpperCase() + card.title.slice(1)
+    }`;
+    aboutTextClone.querySelector("p").textContent = card.description;
+
+    // Append the populated clones to the document fragment
+    cardDocumentFragment.appendChild(cardClone);
+    aboutTextDocumentFragment.appendChild(aboutTextClone);
+  });
+
+  // Append the entire fragment to the DOM in one operation
+  cardsDiv.appendChild(cardDocumentFragment);
+  aboutTextDiv.appendChild(aboutTextDocumentFragment);
+};
+
+renderAbout();
 
 let topCard = document.querySelector(".card.top");
 let middleCard = document.querySelector(".card.middle");
