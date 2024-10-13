@@ -34,24 +34,21 @@
 }
 
 .card.top {
-  /* transform: translate(var(--top-translatex), 0px) scale(var(--top-scale))
-    rotate(var(--top-rotate)); */
-  transform: translate(var(--top-translatex), 0px) scale(1) rotate(-4deg);
+  transform: translate(var(--top-translatex), 0px) scale(var(--top-scale))
+    rotate(var(--top-rotate));
   z-index: 20;
 }
 
 .card.middle {
-  /* transform: translate(var(--middle-translatex), -10px)
-    scale(var(--middle-scale)) rotate(var(--middle-rotate)); */
-  transform: translate(var(--middle-translatex), -10px) scale(0.9) rotate(4deg);
+  transform: translate(var(--middle-translatex), -10px)
+    scale(var(--middle-scale)) rotate(var(--middle-rotate));
   z-index: 19;
   transition: transform 0.8s ease;
 }
 
 .card.bottom {
-  /* transform: translate(var(--bottom-translatex), -10px)
-    scale(var(--bottom-scale)) rotate(var(--bottom-rotate)); */
-  transform: translate(var(--bottom-translatex), -10px) scale(0.8) rotate(-2deg);
+  transform: translate(var(--bottom-translatex), -10px)
+    scale(var(--bottom-scale)) rotate(var(--bottom-rotate));
   z-index: 18;
   transition: transform 0.8s ease;
 }
