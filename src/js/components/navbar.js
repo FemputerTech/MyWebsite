@@ -1,41 +1,30 @@
 // navbar.js
-// import "../../styles/components/navbar.css";
-const animatedGhostOverlay = document.querySelector(".animated-ghost-overlay");
-const navbarToggle = document.querySelector(".navbar-toggle");
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 const topBorder = document.getElementById("top-border");
-const navListToggle = document.querySelector(".nav-list-toggle");
-const navLinks = document.querySelectorAll(".nav-link");
-const splatterSizes = [2, 4, 6];
-
-window.addEventListener("resize", function () {
-  if (window.innerWidth >= 866) {
-    navListToggle.style.display = "none";
-  }
-});
 
 // ================== Animation ================== //
 // Hide after animation ends, otherwise navbar will be completely covered
-animatedGhostOverlay.addEventListener("animationend", function () {
-  this.style.display = "none";
+// Using a regular function because we can use the `this` keyword. Arrow functions
+// don't have a `this` keyword.
+document
+  .querySelector(".animated-ghost-overlay")
+  .addEventListener("animationend", function () {
+    this.style.display = "none";
+  });
+
+// ================== Toggle NavList ================== //
+// Don't need to reuse this code, so I will keep it nested
+document.querySelector(".navbar-toggle").addEventListener("click", () => {
+  const navListToggle = document.querySelector(".nav-list-toggle");
+  if (navListToggle.classList.contains("hidden")) {
+    navListToggle.classList.remove("hidden");
+  } else {
+    navListToggle.classList.add("hidden");
+  }
 });
 
-// ================== Toggle ================== //
-navbarToggle.addEventListener("click", toggleNavList);
-
-function toggleNavList() {
-  if (
-    navListToggle.style.display === "none" ||
-    navListToggle.style.display === ""
-  ) {
-    navListToggle.style.display = "flex";
-  } else {
-    navListToggle.style.display = "";
-  }
-}
-
-// ================== Navbar Hide ================== //
+// // ================== Navbar Hide ================== //
 window.addEventListener("scroll", () => {
   if (window.innerWidth > 865) {
     if (window.scrollY >= 160) {
@@ -61,19 +50,15 @@ window.addEventListener("scroll", () => {
 const showNavbar = () => {
   header.style.opacity = 1;
   topBorder.style.opacity = 1;
-  //   header.style.top = "0";
-  //   topBorder.style.top = "0";
 };
 
 const hideNavbar = () => {
   header.style.opacity = 0;
   topBorder.style.opacity = 0;
-  //   header.style.top = "-100px";
-  //   topBorder.style.top = "-100px";
 };
 
 // ================== NavLinks ================== //
-navLinks.forEach((link) => {
+document.querySelectorAll(".nav-link").forEach((link) => {
   if (window.innerWidth > 865) {
     link.addEventListener("mousedown", () => {
       link.style.boxShadow = "none";
@@ -81,11 +66,10 @@ navLinks.forEach((link) => {
     });
     link.addEventListener("mouseup", () => resetStyles(link));
     link.addEventListener("mouseleave", () => resetStyles(link));
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
       if (window.location.href === link.href) {
-        console.log("splatter!");
         for (let i = 0; i < 3; i++) {
-          createSplatter(link, event);
+          createSplatter(event);
         }
       }
     });
@@ -93,60 +77,60 @@ navLinks.forEach((link) => {
 });
 
 // ~~~~~~~~~~~~~~~~~~~ mouseup & mouseleave ~~~~~~~~~~~~~~~~~~~ //
+// This makes it look like a button is being pressed
 function resetStyles(link) {
   link.style.boxShadow = "4px 4px 1px rgba(0, 0, 0, 1)";
   link.style.transform = "translate(0, 0)";
 }
 
 // ~~~~~~~~~~~~~~~~~~~ click ~~~~~~~~~~~~~~~~~~~ //
-function createSplatter(link, event) {
-  //   const linkRect = link.getBoundingClientRect();
-  //   const centerX = linkRect.left + linkRect.width / 2;
-  //   const centerY = linkRect.top + linkRect.height / 2;
+// it would be cool to have the velocity change depending on
+// how quickly the user presses the button
+function createSplatter(event) {
+  const splatterSizes = [2, 4, 6];
+
+  // Get the position of where the user clicked
   const xClick = event.clientX;
   const yClick = event.clientY;
+
+  // Create a splatter div
   const header = document.querySelector("header");
   const splatter = document.createElement("div");
   splatter.className = "splatter";
+
+  // Generate random splatter sizes
   const randomSize =
     splatterSizes[Math.floor(Math.random() * splatterSizes.length)];
   splatter.style.width = `${randomSize}px`;
   splatter.style.height = `${randomSize}px`;
   splatter.style.display = "block";
+
+  // Position the splatters where the user clicked
   splatter.style.left = `${xClick}px`;
   splatter.style.top = `${yClick}px`;
+
+  // Set random offsets using CSS variables for the animation
+  const xRandom = Math.random() < 0.5 ? -1 : 1;
+  const yRandom = Math.random() * 5;
+
+  // Set CSS custom properties for dynamic values
+  splatter.style.setProperty("--offset-x-1", `${2 * xRandom}px`);
+  splatter.style.setProperty("--offset-y-1", `${-10 - yRandom}px`);
+  splatter.style.setProperty("--offset-x-2", `${4 * xRandom}px`);
+  splatter.style.setProperty("--offset-y-2", `${-20 - yRandom}px`);
+  splatter.style.setProperty("--offset-x-3", `${8 * xRandom}px`);
+  splatter.style.setProperty("--offset-y-3", `${-30 - yRandom}px`);
+  splatter.style.setProperty("--offset-x-4", `${16 * xRandom}px`);
+  splatter.style.setProperty("--offset-y-4", `${-40 - yRandom}px`);
+  splatter.style.setProperty("--offset-x-5", `${32 * xRandom}px`);
+  splatter.style.setProperty("--offset-y-5", `${-50 - yRandom}px`);
+  splatter.style.setProperty("--offset-x-6", `${64 * xRandom}px`);
+  splatter.style.setProperty("--offset-y-6", `${-30 - yRandom}px`);
+
   header.appendChild(splatter);
-  const x = Math.random() < 0.5 ? -1 : 1;
-  const randomOffset = Math.random() * 5;
-  const keyframes = [
-    { opacity: 1, transform: `translateX(${0 * x}) translatey(0)` }, // 0%
-    {
-      opacity: 0,
-      transform: `translate(${2 * x}px, ${-10 - randomOffset}px)`,
-    }, // 10%
-    {
-      opacity: 1,
-      transform: `translate(${4 * x}px, ${-20 - randomOffset}px)`,
-    }, // 20%
-    {
-      opacity: 1,
-      transform: `translate(${8 * x}px, ${-30 - randomOffset}px)`,
-    }, // 30%
-    {
-      opacity: 1,
-      transform: `translate(${16 * x}px, ${-40 - randomOffset}px)`,
-    }, // 40%
-    {
-      opacity: 1,
-      transform: `translate(${32 * x}px, ${-50 - randomOffset}px)`,
-    }, // 50%
-    {
-      opacity: 0,
-      transform: `translate(${64 * x}px, ${-30 - randomOffset}px)`,
-    }, // 100%
-  ];
-  const animation = splatter.animate(keyframes, { duration: 400 });
-  animation.onfinish = () => {
+
+  // Handle removal of the splatter after animation
+  splatter.addEventListener("animationend", () => {
     header.removeChild(splatter);
-  };
+  });
 }

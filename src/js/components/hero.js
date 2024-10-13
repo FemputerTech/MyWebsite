@@ -1,7 +1,6 @@
 // hero.js
 import heroPNG from "../../assets/hero.png";
 import resumePDF from "../../assets/Resume_Meghan_Leicht_Web.pdf";
-// import "../../styles/components/hero.css";
 
 const heroImageMeghan = document.getElementById("hero-image-meghan");
 heroImageMeghan.src = heroPNG;
