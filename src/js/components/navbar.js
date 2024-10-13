@@ -24,7 +24,7 @@ document.querySelector(".navbar-toggle").addEventListener("click", () => {
   }
 });
 
-// // ================== Navbar Hide ================== //
+// ================== Navbar Hide ================== //
 window.addEventListener("scroll", () => {
   if (window.innerWidth > 865) {
     if (window.scrollY >= 160) {

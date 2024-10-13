@@ -108,7 +108,7 @@ nav {
   z-index: 1000;
 }
 
-/* ================ Key Frames ================ */
+/* ================ KEY FRAMES ================ */
 @keyframes bounce {
   0% {
     transform: translateY(20px);
