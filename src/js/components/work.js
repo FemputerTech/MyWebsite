@@ -1,59 +1,80 @@
 // work.js
 import projects from "../../projects.json";
-// import "../../styles/components/work.css";
 
 const renderProjects = () => {
+  /*
+  <div class="project">
+    <div class="project-image">
+      <img src="" id="" aria-label="" />
+    </div>
+    <div class="project-content">
+      <h3 class="project-title"></h3>
+      <h4></h4>
+      <p></p>
+      <a class="github-link" href="" target="_blank"></a>
+    </div>
+  </div>
+  */
   const projectsList = document.querySelector(".projects-list");
-  projectsList.innerHTML = "";
+  const workDocumentFrag = document.createDocumentFragment();
+
+  projectsList.innerHTML = ""; // Clear any existing content
+
   projects.forEach((project) => {
-    // Creating the project div
+    // Create project container div
     const projectDiv = document.createElement("div");
     projectDiv.className = "project";
-    projectsList.appendChild(projectDiv);
 
-    // Creating the project image div
+    // Create project image container div and image
     const projectImageDiv = document.createElement("div");
     projectImageDiv.className = "project-image";
-    projectDiv.appendChild(projectImageDiv);
 
-    // Creating the project image and appending it to project image div
     const projectImage = document.createElement("img");
     projectImage.src = require(`../../assets/project_images/${project.image}`);
     projectImage.id = project.id;
     projectImage.ariaLabel = project.label;
-    projectImageDiv.append(projectImage);
+    projectImageDiv.appendChild(projectImage);
 
-    // Creating the project content
+    // Create project content container
     const projectContent = document.createElement("div");
     projectContent.className = "project-content";
-    projectDiv.appendChild(projectContent);
 
-    // Creating the project title and appending it to project content div
+    // Create and append project title, technologies, description, and github link
     const projectTitle = document.createElement("h3");
     projectTitle.className = "project-title";
     projectTitle.textContent = project.title;
-    projectContent.appendChild(projectTitle);
 
-    // Creating the project technologies and appending it to project content div
     const projectTechnologies = document.createElement("h4");
     projectTechnologies.innerHTML = `Technologies: <span class="technologies">${project.technologies.join(
       ", "
     )}</span>`;
-    projectContent.appendChild(projectTechnologies);
 
-    // Creating the project description and appending it to project content div
     const projectDescription = document.createElement("p");
     projectDescription.textContent = project.description;
-    projectContent.appendChild(projectDescription);
 
-    // Creating the project github link and appending it to project content div
     const githubLink = document.createElement("a");
     githubLink.className = "github-link";
-    githubLink.setAttribute("href", project.github);
-    githubLink.setAttribute("target", "_blank");
+    githubLink.href = project.github;
+    githubLink.target = "_blank";
     githubLink.textContent = "Link to Github repository";
-    projectContent.appendChild(githubLink);
+
+    // Append elements to projectContent div
+    projectContent.append(
+      projectTitle,
+      projectTechnologies,
+      projectDescription,
+      githubLink
+    );
+
+    // Append project image and content divs to the project div
+    projectDiv.append(projectImageDiv, projectContent);
+
+    // Append project div to the document fragment
+    workDocumentFrag.appendChild(projectDiv);
   });
+
+  // Append the entire fragment to the DOM in one operation
+  projectsList.appendChild(workDocumentFrag);
 };
 
 renderProjects();
