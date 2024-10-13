@@ -222,14 +222,32 @@
       <section id="skills" class="skills">
         <h2>Skills</h2>
         <ul class="skills-list">
-          <!-- dynamically adding skill here with document fragment  -->
+          <template id="skills-template">
+            <li class="skills-item">
+              <a class="skills-link" href="" target="_blank"></a>
+            </li>
+          </template>
         </ul>
       </section>
       <!-- Work Section -->
       <section id="work" class="work">
         <h2>My Projects</h2>
         <div class="projects-list">
-          <!-- dynamically adding projects here with document fragment  -->
+          <template id="project-template">
+            <div class="project">
+              <div class="project-image">
+                <img src="" id="" aria-label="" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title"></h3>
+                <h4></h4>
+                <p></p>
+                <a class="github-link" href="" target="_blank"
+                  >Link to Github repository</a
+                >
+              </div>
+            </div>
+          </template>
         </div>
       </section>
       <!-- Contact Section -->

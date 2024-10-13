@@ -1,35 +1,20 @@
 // skills.js
-import skills from "../../skills.json";
+import skills from "../../data/skills.json";
 
 const renderSkills = () => {
-  /*
-    <li class="skills-item">
-        <a
-            class="skills-link"
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-            target="_blank"
-            >HTML</a
-        >
-    </li>
-    */
   const skillsList = document.querySelector(".skills-list");
+  const skillsTemplate = document.getElementById("skills-template");
   const skillsDocumentFragment = document.createDocumentFragment();
 
   skills.forEach((skill) => {
-    // Create skill item container
-    const skillItem = document.createElement("li");
-    skillItem.className = "skills-item";
+    const skillClone = skillsTemplate.content.cloneNode(true);
 
-    // Create skill link a tag
-    const skillLink = document.createElement("a");
-    skillLink.className = "skills-link";
-    skillLink.href = skills.link;
-    skillLink.target = "_blank";
-    skillLink.textContent = skill.name;
-    skillItem.appendChild(skillLink);
+    // Populate template
+    skillClone.querySelector(".skills-link").href = skill.link;
+    skillClone.querySelector(".skills-link").textContent = skill.name;
 
-    // Append the skill item to the document fragment
-    skillsDocumentFragment.appendChild(skillItem);
+    // Append the populated skill clone to the document fragment
+    skillsDocumentFragment.appendChild(skillClone);
   });
 
   // Append the entire fragment to the DOM in one operation
