@@ -1,0 +1,75 @@
+[
+  {
+    "name": "HTML",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+  },
+  {
+    "name": "CSS",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+  },
+  {
+    "name": "JavaScript",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  {
+    "name": "TypeScript",
+    "link": "https://www.typescriptlang.org/docs/handbook/intro.html"
+  },
+  {
+    "name": "React",
+    "link": "https://react.dev/learn"
+  },
+  {
+    "name": "Redux",
+    "link": "https://redux.js.org/introduction/getting-started"
+  },
+  {
+    "name": "Firebase",
+    "link": "https://firebase.google.com/docs/build"
+  },
+  {
+    "name": "BootStrap",
+    "link": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+  },
+  {
+    "name": "Figma",
+    "link": "https://help.figma.com/hc/en-us/categories/360002051613"
+  },
+  {
+    "name": "UI/UX Design",
+    "link": ""
+  },
+  {
+    "name": "Python",
+    "link": "https://docs.python.org/3/"
+  },
+  {
+    "name": "Git",
+    "link": "https://rogerdudler.github.io/git-guide/"
+  },
+  {
+    "name": "Rest APIs",
+    "link": "https://www.ibm.com/topics/rest-apis"
+  },
+  {
+    "name": "Webpack",
+    "link": "https://webpack.js.org/guides/getting-started/"
+  },
+  {
+    "name": "Flask",
+    "link": "https://flask.palletsprojects.com/en/3.0.x/quickstart/"
+  },
+
+  {
+    "name": "Docker",
+    "link": "https://docs.docker.com/get-started/"
+  },
+  {
+    "name": "GCP",
+    "link": "https://cloud.google.com/docs/get-started"
+  },
+  {
+    "name": "SQL",
+    "link": "https://www.w3schools.com/sql/default.asp"
+  }
+]

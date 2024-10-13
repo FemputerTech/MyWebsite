@@ -14,5 +14,6 @@ import "./js/components/about.js";
 import "./js/components/border.js";
 import "./js/components/hero.js";
 import "./js/components/navbar.js";
+import "./js/components/skills.js";
 import "./js/components/work.js";
 // import "./js/darkmode.js";
