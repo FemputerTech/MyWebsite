@@ -10,8 +10,9 @@ const renderSkills = () => {
     const skillClone = skillsTemplate.content.cloneNode(true);
 
     // Populate template
-    skillClone.querySelector(".skills-link").href = skill.link;
-    skillClone.querySelector(".skills-link").textContent = skill.name;
+    const skillLink = skillClone.querySelector(".skills-link");
+    skillLink.href = skill.link;
+    skillLink.textContent = skill.name;
 
     // Append the populated skill clone to the document fragment
     skillsDocumentFragment.appendChild(skillClone);

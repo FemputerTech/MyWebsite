@@ -1,6 +1,8 @@
 // about.js
 import cards from "../../data/cards.json";
 
+// ================== Render ================== //
+// Renders the about cards and text with templates and document fragments
 const renderAbout = () => {
   const cardsDiv = document.querySelector(".cards");
   const aboutTextDiv = document.querySelector(".about-text-container");
@@ -16,8 +18,10 @@ const renderAbout = () => {
     const aboutTextClone = aboutTextTemplate.content.cloneNode(true);
 
     // Populate card template
-    cardClone.querySelector(".card").classList.add(card.position);
-    cardClone.querySelector(".card").id = card.title;
+    const cardDiv = cardClone.querySelector(".card");
+    cardDiv.classList.add(card.position);
+    cardDiv.id = card.title;
+
     cardClone.querySelector(".card-background").id = `background-${card.title}`;
     cardClone.querySelector(".card-number").textContent = card.number;
 
@@ -31,9 +35,10 @@ const renderAbout = () => {
       card.title.toUpperCase();
 
     // Populate about text template
-    aboutTextClone.querySelector(".about-text").classList.add(card.title);
+    const aboutTextDiv = aboutTextClone.querySelector(".about-text");
+    aboutTextDiv.classList.add(card.title);
     if (card.active) {
-      aboutTextClone.querySelector(".about-text").classList.add(card.active);
+      aboutTextDiv.classList.add(card.active);
     }
     aboutTextClone.querySelector("h3").textContent = `My ${
       card.title.charAt(0).toUpperCase() + card.title.slice(1)
@@ -52,6 +57,8 @@ const renderAbout = () => {
 
 renderAbout();
 
+// ================== Dragging ================== //
+// Card dragging logic
 let topCard = document.querySelector(".card.top");
 let middleCard = document.querySelector(".card.middle");
 let bottomCard = document.querySelector(".card.bottom");
@@ -101,46 +108,50 @@ function mouseMove(event) {
   }
 }
 
+function cardSwap() {
+  topCard.classList.remove("top");
+  topCard.classList.add("bottom");
+  topCard.style.transform = `translate(${bottomTransform[0]}) scale(${bottomTransform[1]}) rotate(${bottomTransform[2]})`;
+
+  middleCard.classList.remove("middle");
+  middleCard.classList.add("top");
+  middleCard.style.transition = "transform 0.8s ease";
+  middleCard.style.transform = `translate(${topTransform[0]}) scale(${topTransform[1]}) rotate(${topTransform[2]})`;
+
+  bottomCard.classList.remove("bottom");
+  bottomCard.classList.add("middle");
+  bottomCard.style.transition = "transform 0.8s ease";
+  bottomCard.style.transform = `translate(${middleTransform[0]}) scale(${middleTransform[1]}) rotate(${middleTransform[2]})`;
+
+  const aboutText = document.querySelector(".about-text");
+  aboutText.style.opacity = 1;
+  aboutText.style.transition = "opacity 2s ease";
+
+  const CardTexts = document.querySelectorAll(".about-text");
+  CardTexts.forEach((cardText) => {
+    if (cardText.classList.contains(middleCard.id)) {
+      cardText.classList.add("active");
+      cardText.style.opacity = 1;
+    } else {
+      cardText.classList.remove("active");
+      cardText.style.opacity = 0;
+    }
+  });
+
+  topCard.style.zIndex = 18;
+  middleCard.style.zIndex = 20;
+  bottomCard.style.zIndex = 19;
+
+  [topCard, middleCard, bottomCard] = [middleCard, bottomCard, topCard];
+}
+
 function mouseUp() {
   topCard.removeEventListener("mousedown", mouseDown);
   topCard.style.transition = "transform 0.8s ease";
   translateX = 0;
 
   if (Math.abs(dragDistance) > 160) {
-    topCard.classList.remove("top");
-    topCard.classList.add("bottom");
-    topCard.style.transform = `translate(${bottomTransform[0]}) scale(${bottomTransform[1]}) rotate(${bottomTransform[2]})`;
-
-    middleCard.classList.remove("middle");
-    middleCard.classList.add("top");
-    middleCard.style.transition = "transform 0.8s ease";
-    middleCard.style.transform = `translate(${topTransform[0]}) scale(${topTransform[1]}) rotate(${topTransform[2]})`;
-
-    bottomCard.classList.remove("bottom");
-    bottomCard.classList.add("middle");
-    bottomCard.style.transition = "transform 0.8s ease";
-    bottomCard.style.transform = `translate(${middleTransform[0]}) scale(${middleTransform[1]}) rotate(${middleTransform[2]})`;
-
-    const aboutText = document.querySelector(".about-text");
-    aboutText.style.opacity = 1;
-    aboutText.style.transition = "opacity 2s ease";
-
-    const CardTexts = document.querySelectorAll(".about-text");
-    CardTexts.forEach((cardText) => {
-      if (cardText.classList.contains(middleCard.id)) {
-        cardText.classList.add("active");
-        cardText.style.opacity = 1;
-      } else {
-        cardText.classList.remove("active");
-        cardText.style.opacity = 0;
-      }
-    });
-
-    topCard.style.zIndex = 18;
-    middleCard.style.zIndex = 20;
-    bottomCard.style.zIndex = 19;
-
-    [topCard, middleCard, bottomCard] = [middleCard, bottomCard, topCard];
+    cardSwap();
   } else {
     topCard.style.transform = `translate(${topTransform[0]}) scale(${topTransform[1]}) rotate(${topTransform[2]})`;
   }

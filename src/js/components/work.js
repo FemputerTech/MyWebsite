@@ -10,11 +10,10 @@ const renderProjects = () => {
     const projectClone = projectTemplate.content.cloneNode(true);
 
     // Populate template
-    projectClone.querySelector(
-      "img"
-    ).src = require(`../../assets/project_images/${project.image}`);
-    projectClone.querySelector("img").id = project.id;
-    projectClone.querySelector("img").ariaLabel = project.label;
+    const projectImage = projectClone.querySelector("img");
+    projectImage.src = require(`../../assets/project_images/${project.image}`);
+    projectImage.id = project.id;
+    projectImage.ariaLabel = project.label;
     projectClone.querySelector(".project-title").textContent = project.title;
     projectClone.querySelector(
       "h4"
