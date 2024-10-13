@@ -63,8 +63,14 @@ html {
   --lg-card-width: 380px;
 
   --top-translatex: -40px;
+  --top-scale: 1;
+  --top-rotate: -4deg;
   --middle-translatex: 10px;
+  --middle-scale: 0.9;
+  --middle-rotate: 4deg;
   --bottom-translatex: 50px;
+  --bottom-scale: 0.8;
+  --bottom-rotate: -2deg;
 }
 
 .spooky {
@@ -368,15 +374,23 @@ p {
 }
 
 .card.top {
+  transform: translate(var(--top-translatex), 0px) scale(var(--top-scale))
+    rotate(var(--top-rotate));
   z-index: 20;
 }
 
 .card.middle {
+  transform: translate(var(--middle-translatex), -10px)
+    scale(var(--middle-scale)) rotate(var(--middle-rotate));
   z-index: 19;
+  transition: transform 0.8s ease;
 }
 
 .card.bottom {
+  transform: translate(var(--bottom-translatex), -10px)
+    scale(var(--bottom-scale)) rotate(var(--bottom-rotate));
   z-index: 18;
+  transition: transform 0.8s ease;
 }
 
 .about-text-container {
@@ -477,23 +491,6 @@ p {
     height: calc(var(--sm-card-width) + 120px);
   }
 
-  .card.top {
-    transform: translate(var(--top-translatex), 0px) scale(1) rotate(-4deg);
-    z-index: 20;
-  }
-
-  .card.middle {
-    transform: translate(var(--middle-translatex), -10px) scale(0.9)
-      rotate(4deg);
-    z-index: 19;
-  }
-
-  .card.bottom {
-    transform: translate(var(--bottom-translatex), -10px) scale(0.8)
-      rotate(-2deg);
-    z-index: 18;
-  }
-
   .card-number {
     font-size: 1.5em;
   }
@@ -536,21 +533,6 @@ p {
   .card {
     width: var(--lg-card-width);
     height: calc(var(--lg-card-width) + 120px);
-  }
-
-  .card.top {
-    transform: translate(calc(var(--top-translatex) * 2), 0px) scale(1)
-      rotate(-4deg);
-  }
-
-  .card.middle {
-    transform: translate(calc(var(--middle-translatex) * 2), -10px) scale(0.9)
-      rotate(4deg);
-  }
-
-  .card.bottom {
-    transform: translate(calc(var(--bottom-translatex) * 2), -10px) scale(0.8)
-      rotate(-2deg);
   }
 
   .card-number {
@@ -922,7 +904,7 @@ nav {
   z-index: 1000;
 }
 
-/* ================ Key Frames ================ */
+/* ================ KEY FRAMES ================ */
 @keyframes bounce {
   0% {
     transform: translateY(20px);
