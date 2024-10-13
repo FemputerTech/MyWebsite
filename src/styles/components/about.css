@@ -34,15 +34,26 @@
 }
 
 .card.top {
+  /* transform: translate(var(--top-translatex), 0px) scale(var(--top-scale))
+    rotate(var(--top-rotate)); */
+  transform: translate(var(--top-translatex), 0px) scale(1) rotate(-4deg);
   z-index: 20;
 }
 
 .card.middle {
+  /* transform: translate(var(--middle-translatex), -10px)
+    scale(var(--middle-scale)) rotate(var(--middle-rotate)); */
+  transform: translate(var(--middle-translatex), -10px) scale(0.9) rotate(4deg);
   z-index: 19;
+  transition: transform 0.8s ease;
 }
 
 .card.bottom {
+  /* transform: translate(var(--bottom-translatex), -10px)
+    scale(var(--bottom-scale)) rotate(var(--bottom-rotate)); */
+  transform: translate(var(--bottom-translatex), -10px) scale(0.8) rotate(-2deg);
   z-index: 18;
+  transition: transform 0.8s ease;
 }
 
 .about-text-container {
@@ -143,23 +154,6 @@
     height: calc(var(--sm-card-width) + 120px);
   }
 
-  .card.top {
-    transform: translate(var(--top-translatex), 0px) scale(1) rotate(-4deg);
-    z-index: 20;
-  }
-
-  .card.middle {
-    transform: translate(var(--middle-translatex), -10px) scale(0.9)
-      rotate(4deg);
-    z-index: 19;
-  }
-
-  .card.bottom {
-    transform: translate(var(--bottom-translatex), -10px) scale(0.8)
-      rotate(-2deg);
-    z-index: 18;
-  }
-
   .card-number {
     font-size: 1.5em;
   }
@@ -202,21 +196,6 @@
   .card {
     width: var(--lg-card-width);
     height: calc(var(--lg-card-width) + 120px);
-  }
-
-  .card.top {
-    transform: translate(calc(var(--top-translatex) * 2), 0px) scale(1)
-      rotate(-4deg);
-  }
-
-  .card.middle {
-    transform: translate(calc(var(--middle-translatex) * 2), -10px) scale(0.9)
-      rotate(4deg);
-  }
-
-  .card.bottom {
-    transform: translate(calc(var(--bottom-translatex) * 2), -10px) scale(0.8)
-      rotate(-2deg);
   }
 
   .card-number {

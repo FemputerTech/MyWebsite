@@ -52,8 +52,14 @@ html {
   --lg-card-width: 380px;
 
   --top-translatex: -40px;
+  --top-scale: 1;
+  --top-rotate: -4deg;
   --middle-translatex: 10px;
+  --middle-scale: 0.9;
+  --middle-rotate: 4deg;
   --bottom-translatex: 50px;
+  --bottom-scale: 0.8;
+  --bottom-rotate: -2deg;
 }
 
 .spooky {
