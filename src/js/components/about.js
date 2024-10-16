@@ -94,9 +94,8 @@ window.addEventListener("resize", () => {
   resetCardTransforms(bottomCard);
 });
 
-// Mouse and touch event handlers
+// Mouse event handlers
 topCard.addEventListener("mousedown", mouseDown);
-topCard.addEventListener("touchstart", touchStart);
 
 function mouseDown(event) {
   event.preventDefault();
@@ -106,21 +105,8 @@ function mouseDown(event) {
   document.addEventListener("mouseup", mouseUp);
 }
 
-function touchStart(event) {
-  event.preventDefault();
-  offsetX = event.touches[0].clientX;
-
-  document.addEventListener("touchmove", touchMove);
-  document.addEventListener("touchend", touchEnd);
-}
-
 function mouseMove(event) {
   const newX = event.clientX - offsetX;
-  handleDrag(newX);
-}
-
-function touchMove(event) {
-  const newX = event.touches[0].clientX - offsetX;
   handleDrag(newX);
 }
 
@@ -191,26 +177,6 @@ function mouseUp() {
   topCard.addEventListener("mousedown", mouseDown);
   document.removeEventListener("mousemove", mouseMove);
   document.removeEventListener("mouseup", mouseUp);
-
-  setTimeout(() => {
-    topCard.style.transition = ""; // Reset transition
-  }, 800);
-}
-
-// Touch end event handler
-function touchEnd() {
-  topCard.removeEventListener("touchstart", touchStart);
-  topCard.style.transition = "transform 0.8s ease";
-
-  if (Math.abs(dragDistance) > 160) {
-    cardSwap();
-  } else {
-    resetCardTransforms(topCard);
-  }
-
-  topCard.addEventListener("touchstart", touchStart);
-  document.removeEventListener("touchmove", touchMove);
-  document.removeEventListener("touchend", touchEnd);
 
   setTimeout(() => {
     topCard.style.transition = ""; // Reset transition
