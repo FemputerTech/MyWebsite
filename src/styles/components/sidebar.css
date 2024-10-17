@@ -4,7 +4,7 @@
 }
 
 /* ================ MEDIA QUERIES ================ */
-@media (min-width: 866px) {
+@media (min-width: 992px) {
   .sidebar {
     position: fixed;
     display: flex;
