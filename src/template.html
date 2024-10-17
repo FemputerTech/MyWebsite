@@ -13,12 +13,16 @@
   <body>
     <header>
       <div class="animated-overlay">
-        <i class="logo-icon animated fa-solid fa-ghost fa-lg"></i> <!-- Halloween -->
+        <i class="logo-icon animated fa-solid fa-ghost fa-lg"></i>
+        <!-- Halloween -->
         <!--<i class="logo-icon animated fa-solid fa-candy-cane fa-lg"></i> Christmas -->
         <!-- <i class="logo-icon animated fa-solid fa-user-astronaut fa-lg"></i> Everything else -->
       </div>
       <div class="logo-container">
-        <img class="logo-icon"></img>
+        <div class="logo-icon-container">
+          <a id="home-page" href="#"> <div class="key" id="f">F</div></a>
+          <a id="home-page" href="#"><div class="key" id="t">T</div></a>
+        </div>
         <span class="logo-text">FemputerTech</span>
       </div>
       <nav>
@@ -29,9 +33,6 @@
           ></i>
         </div>
         <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" id="home-page" href="#">Home</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" id="about-page" href="#about">About</a>
           </li>
@@ -65,9 +66,6 @@
       <!-- dynamically adding splatters -->
     </header>
     <ul class="nav-list-toggle hidden">
-      <li class="nav-item-toggle">
-        <a class="nav-link-toggle" id="home-page" href="#">Home</a>
-      </li>
       <li class="nav-item-toggle">
         <a class="nav-link-toggle" id="about-page" href="#about">About</a>
       </li>
@@ -107,7 +105,8 @@
         <div class="hero-content">
           <div class="hero-text">
             <h1 class="line">
-              I CODE WITH <br/> CREATIVITY
+              I CODE WITH <br />
+              CREATIVITY
               <!-- I bring designs to <br />life with code and <br />creativity. -->
             </h1>
             <h4 class="line">
