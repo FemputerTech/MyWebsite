@@ -796,7 +796,7 @@ form textarea::placeholder {
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/navbar.css ***!
   \************************************************************************************/
 /* ****************** Navbar ****************** */
-.animated-ghost-overlay {
+.animated-overlay {
   position: absolute;
   background: linear-gradient(
     to right,
@@ -813,25 +813,27 @@ form textarea::placeholder {
   animation-delay: 0.5s;
 }
 
-.animated-logo-icon {
+.logo-icon.animated {
   position: absolute;
   right: 40px;
   animation: bounce 1s infinite forwards;
+  width: 24px;
+  height: auto;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   color: var(--text-normal);
   text-decoration: none;
-  gap: 10px;
+  gap: 8px;
 }
 
 .logo-text {
   font-family: var(--font-logo);
-  font-size: 1.4em;
-  font-weight: 800;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 nav {
@@ -965,20 +967,8 @@ nav {
 }
 
 /* ================ MEDIA QUERIES ================ */
-@media (min-width: 378px) and (max-width: 575px) {
-  .logo-text {
-    font-size: 1.6em;
-  }
-}
-
-@media (min-width: 576px) {
-  .logo-text {
-    font-size: 1.8em;
-  }
-}
-
 @media (min-width: 866px) {
-  .animated-ghost-overlay {
+  .animated-overlay {
     height: 80px;
   }
 

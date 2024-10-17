@@ -1,4 +1,5 @@
 // navbar.js
+import iconPNG from "../../assets/icon.png";
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 const topBorder = document.getElementById("top-border");
@@ -7,8 +8,14 @@ const topBorder = document.getElementById("top-border");
 // Hide after animation ends, otherwise navbar will be completely covered
 // Using a regular function because we can use the `this` keyword. Arrow functions
 // don't have a `this` keyword.
+
+const logoIcon = document.querySelectorAll(".logo-icon");
+logoIcon.forEach((icon) => {
+  icon.src = iconPNG;
+});
+
 document
-  .querySelector(".animated-ghost-overlay")
+  .querySelector(".animated-overlay")
   .addEventListener("animationend", function () {
     this.style.display = "none";
   });
