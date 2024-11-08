@@ -41,7 +41,8 @@
   border-radius: 4px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
   color: var(--text-normal);
-  font-weight: 600;
+  font-family: var(--font-logo);
+  font-weight: 900;
   width: 24px;
   height: 24px;
   transition: 0.2s;

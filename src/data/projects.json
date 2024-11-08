@@ -1,5 +1,15 @@
 [
   {
+    "id": "creepycinema",
+    "title": "Creepy Cinema",
+    "technologies": ["React.js", "Node.js", "CSS", "Docker", "GCP", "REST API"],
+    "description": "A horror movie recommendation application that integrates the TMDB API.",
+    "link": "https://horrormovies-754209826365.us-west1.run.app/",
+    "image": "CreepyCinema.png",
+    "label": "Creepy Cinema project",
+    "github": "https://github.com/FemputerTech/HorrorMovies"
+  },
+  {
     "id": "beeteats",
     "title": "BeetEats",
     "technologies": [
