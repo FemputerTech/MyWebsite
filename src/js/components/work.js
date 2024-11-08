@@ -10,6 +10,8 @@ const renderProjects = () => {
     const projectClone = projectTemplate.content.cloneNode(true);
 
     // Populate template
+    const projectImageLink = projectClone.querySelector(".project-image");
+    projectImageLink.href = project.link;
     const projectImage = projectClone.querySelector("img");
     projectImage.src = require(`../../assets/project_images/${project.image}`);
     projectImage.id = project.id;
