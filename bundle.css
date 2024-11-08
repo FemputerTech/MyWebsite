@@ -13,6 +13,10 @@
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (3) ***!
   \***************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Borel&display=swap);
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (4) ***!
+  \***************************************************************************/
 @font-face {
   font-family: "HerosAssembleFont";
   src: url(HeroesAssembleRegular-Kmvl.otf) format("opentype");
@@ -49,7 +53,7 @@ html {
 
   --font-family: "Lato", sans-serif;
 
-  --font-logo: "Space Grotesk", sans-serif;
+  --font-logo: "Borel", cursive;
   --font-heading: "Space Grotesk", sans-serif;
 
   --font-button: "Space Grotesk", sans-serif;
@@ -889,8 +893,9 @@ form textarea::placeholder {
 
 .logo-text {
   font-family: var(--font-logo);
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight: 600;
+  padding-top: 20px;
 }
 
 nav {
