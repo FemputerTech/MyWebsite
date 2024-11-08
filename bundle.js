@@ -103,7 +103,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./BeetEats.png\": \"./src/assets/project_images/BeetEats.png\",\n\t\"./BeetEatsDevice.png\": \"./src/assets/project_images/BeetEatsDevice.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/project_images sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/project_images/_sync_^\\.\\/.*$?");
+eval("var map = {\n\t\"./BeetEats.png\": \"./src/assets/project_images/BeetEats.png\",\n\t\"./BeetEatsDevice.png\": \"./src/assets/project_images/BeetEatsDevice.png\",\n\t\"./CreepyCinema.png\": \"./src/assets/project_images/CreepyCinema.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/project_images sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/project_images/_sync_^\\.\\/.*$?");
 
 /***/ }),
 
@@ -226,6 +226,17 @@ eval("module.exports = __webpack_require__.p + \"BeetEatsDevice.png\";\n\n//# so
 
 /***/ }),
 
+/***/ "./src/assets/project_images/CreepyCinema.png":
+/*!****************************************************!*\
+  !*** ./src/assets/project_images/CreepyCinema.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"CreepyCinema.png\";\n\n//# sourceURL=webpack://mywebsite/./src/assets/project_images/CreepyCinema.png?");
+
+/***/ }),
+
 /***/ "./src/data/cards.json":
 /*!*****************************!*\
   !*** ./src/data/cards.json ***!
@@ -244,7 +255,7 @@ eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"future\",\"number\
 /***/ ((module) => {
 
 "use strict";
-eval("module.exports = /*#__PURE__*/JSON.parse('[{\"id\":\"beeteats\",\"title\":\"BeetEats\",\"technologies\":[\"HTML\",\"CSS\",\"JavaScript\",\"Python\",\"Flask\",\"REST API\"],\"description\":\"A recipe finder & meal planning application that integrates the EDAMAM API.\",\"link\":\"https://mealplanner-luizsfhgza-uw.a.run.app/\",\"image\":\"BeetEats.png\",\"label\":\"BeetEats project\",\"github\":\"https://github.com/FemputerTech/MealPlanner\"}]');\n\n//# sourceURL=webpack://mywebsite/./src/data/projects.json?");
+eval("module.exports = /*#__PURE__*/JSON.parse('[{\"id\":\"creepycinema\",\"title\":\"Creepy Cinema\",\"technologies\":[\"React.js\",\"Node.js\",\"CSS\",\"Docker\",\"GCP\",\"REST API\"],\"description\":\"A horror movie recommendation application that integrates the TMDB API.\",\"link\":\"https://horrormovies-754209826365.us-west1.run.app/\",\"image\":\"CreepyCinema.png\",\"label\":\"Creepy Cinema project\",\"github\":\"https://github.com/FemputerTech/HorrorMovies\"},{\"id\":\"beeteats\",\"title\":\"BeetEats\",\"technologies\":[\"HTML\",\"CSS\",\"JavaScript\",\"Python\",\"Flask\",\"REST API\"],\"description\":\"A recipe finder & meal planning application that integrates the EDAMAM API.\",\"link\":\"https://mealplanner-luizsfhgza-uw.a.run.app/\",\"image\":\"BeetEats.png\",\"label\":\"BeetEats project\",\"github\":\"https://github.com/FemputerTech/MealPlanner\"}]');\n\n//# sourceURL=webpack://mywebsite/./src/data/projects.json?");
 
 /***/ }),
 
